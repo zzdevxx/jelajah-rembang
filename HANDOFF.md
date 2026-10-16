@@ -27,7 +27,7 @@ telah terpasang.
 | Playwright (seluruh suite) | **43 lulus** (smoke, kontras, interaksi, ketahanan, search) |
 | Kontras WCAG AA | **850+ pasangan, 0 gagal** (6 halaman × terang/gelap) |
 | Gambar OG (per halaman) | **86** (`/og/<slug>.jpg`, 1200×630) |
-| Versi Cloudflare aktif | `47693550-4063-4fb6-8049-3d04e8184f5f` |
+| Versi Cloudflare aktif | `15b28fdc-0cba-4209-a94f-2efed6639a5b` |
 
 **Live:** https://jelajah-rembang.zzdree.workers.dev (deploy 9 Okt 2026 memuat **seluruh**
 perubahan commit `c99814b`: palet "Pesisir Segar", satu keluarga sans, tanpa coklat/emas)
