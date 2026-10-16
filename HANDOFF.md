@@ -25,11 +25,11 @@ untuk kartu tanpa foto.
 | Pencarian statis (Pagefind) | **Aktif & bilingual** (35 id-id / 35 en-us), modal keyboard-accessible |
 | `astro check` | **0 error / 0 warning / 0 hint** |
 | Impeccable design lint | **0 anti-pattern** |
-| Playwright (seluruh suite) | **43 lulus** (smoke, kontras, interaksi, ketahanan, search) |
+| Playwright (seluruh suite) | **47 lulus** (smoke, kontras, interaksi, ketahanan, search, live) |
 | Anti-Slop (strict scan) | **0 error / 0 warning (242 files)** |
 | Kontras WCAG AA | **850+ pasangan, 0 gagal** (6 halaman × terang/gelap) |
 | Gambar OG (per halaman) | **86** (`/og/<slug>.jpg`, 1200×630) |
-| Versi Cloudflare aktif | `ee538859-5f24-4266-b56c-297f2e5f5e35` |
+| Versi Cloudflare aktif | `4c453ecd-1c50-4d7a-b230-1496d7f14aa0` |
 
 **Live:** https://jelajah-rembang.zzdree.workers.dev
 **Repo:** https://github.com/zzdree/jelajah-rembang
