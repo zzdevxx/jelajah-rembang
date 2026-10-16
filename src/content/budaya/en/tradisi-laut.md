@@ -2,6 +2,8 @@
 translationKey: tradisi-laut
 title: "Sea Offerings and the Coastal Traditions"
 summary: Rembang's coastal people give thanks through sea offerings, floating rituals, and the washing of a sacred gong. The rites are old; their meaning keeps being reread.
+cover: ../../../assets/budaya/tradisi-laut.jpg
+coverAlt: "Traditional boatbuilding workshop on the coast of Sarang, Rembang."
 category: tradisi
 tags:
   - sea-offering

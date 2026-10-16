@@ -528,5 +528,35 @@
     "source": "https://commons.wikimedia.org/wiki/File:Mangut_kepala_manyung.jpg",
     "width": 1920,
     "height": 1958
+  },
+  {
+    "local": "budaya/tradisi-laut.jpg",
+    "title": "Bengkel perahu tradisional di pesisir Sarang, Rembang",
+    "artist": "Purnawibawa",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Bengkel_Perahu_di_Sarang_(Rembang).jpg",
+    "width": 1920,
+    "height": 1280
+  },
+  {
+    "local": "kuliner/dumbeg.jpg",
+    "title": "Dumbeg (clorot), jajanan tradisional berbungkus janur",
+    "artist": "Salm Abdullah",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Celorot_1.jpg",
+    "width": 1920,
+    "height": 1371
+  },
+  {
+    "local": "kuliner/urap-latoh.jpg",
+    "title": "Latoh (anggur laut / Caulerpa racemosa)",
+    "artist": "Coughdrop12",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Caulerpa_racemosa_Sea_grapes.jpg",
+    "width": 1920,
+    "height": 1440
   }
 ]

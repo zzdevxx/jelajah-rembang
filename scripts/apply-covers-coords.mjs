@@ -38,6 +38,12 @@ const COVERS = [
     alt: { id: 'Kelenteng Gie Yong Bio di Lasem.', en: 'Gie Yong Bio Temple in Lasem.' } },
   { koleksi: 'kuliner', slug: 'mangut-manyung', cover: '../../../assets/kuliner/mangut-manyung.jpg',
     alt: { id: 'Mangut kepala ikan manyung khas pesisir.', en: 'Smoked manyung fish head curry.' } },
+  { koleksi: 'budaya', slug: 'tradisi-laut', cover: '../../../assets/budaya/tradisi-laut.jpg',
+    alt: { id: 'Bengkel perahu tradisional di pesisir Sarang, Rembang.', en: 'Traditional boatbuilding workshop on the coast of Sarang, Rembang.' } },
+  { koleksi: 'kuliner', slug: 'dumbeg', cover: '../../../assets/kuliner/dumbeg.jpg',
+    alt: { id: 'Dumbeg, jajanan manis gurih berbalut daun lontar spiral.', en: 'Dumbeg, a sweet and savoury snack wrapped in spiral palm leaves.' } },
+  { koleksi: 'kuliner', slug: 'urap-latoh', cover: '../../../assets/kuliner/urap-latoh.jpg',
+    alt: { id: 'Latoh atau anggur laut (Caulerpa racemosa) segar khas pesisir Rembang.', en: 'Fresh latoh or sea grapes (Caulerpa racemosa) typical of the Rembang coast.' } },
   { koleksi: 'sejarah', slug: 'asal-usul-nama-rembang', cover: '../../../assets/galeri/pesisir-dan-pantai/pelabuhan-rembang-01.jpg',
     alt: { id: 'Pelabuhan Rembang di pesisir utara.', en: 'The port of Rembang on the north coast.' } },
 ];

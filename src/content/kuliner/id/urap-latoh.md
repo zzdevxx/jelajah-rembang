@@ -1,7 +1,9 @@
 ---
 translationKey: urap-latoh
 title: Urap Latoh
-summary: Rumput laut latoh segar yang tidak dimasak, dicampur kelapa parah berbumbu dan sambal, disantap dengan nasi, tempe goreng, dan ikan asin.
+summary: Rumput laut latoh segar yang tidak dimasak, dicampur kelapa parut berbumbu dan sambal, disantap dengan nasi, tempe goreng, dan ikan asin.
+cover: ../../../assets/kuliner/urap-latoh.jpg
+coverAlt: "Latoh atau anggur laut (Caulerpa racemosa) segar khas pesisir Rembang."
 type: makanan
 origin: Rembang (pesisir)
 ingredients:

@@ -2,6 +2,8 @@
 translationKey: urap-latoh
 title: Urap Latoh
 summary: Fresh latoh sea grape, never cooked, tossed with spiced grated coconut and sambal, served with rice, fried tempeh, and salted fish.
+cover: ../../../assets/kuliner/urap-latoh.jpg
+coverAlt: "Fresh latoh or sea grapes (Caulerpa racemosa) typical of the Rembang coast."
 type: makanan
 origin: Rembang (coastal)
 ingredients:

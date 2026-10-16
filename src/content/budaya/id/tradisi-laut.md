@@ -2,6 +2,8 @@
 translationKey: tradisi-laut
 title: "Sedekah Laut, Lomban, dan Tradisi Pesisir"
 summary: Warga pesisir Rembang memanjatkan syukur lewat sedekah laut, larung sesaji, dan penjamasan bende pusaka. Ritualnya tua, maknanya terus dibaca ulang.
+cover: ../../../assets/budaya/tradisi-laut.jpg
+coverAlt: "Bengkel perahu tradisional di pesisir Sarang, Rembang."
 category: tradisi
 tags:
   - sedekah-laut

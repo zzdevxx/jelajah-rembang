@@ -18,8 +18,8 @@ telah terpasang.
 | Halaman terbangun | **74** |
 | Artikel konten | **54** (27 judul × 2 bahasa) |
 | Album galeri | **6** (12 berkas id+en), **36 foto** |
-| Foto (Wikimedia Commons) | **54** berkas (**53** entri `credits.json`) |
-| Judul ber-cover | **21** dari 27 (tambah Gie Yong Bio & Mangut Manyung) |
+| Foto (Wikimedia Commons) | **57** berkas (**56** entri `credits.json`) |
+| Judul ber-cover | **24** dari 27 (tambah Tradisi Laut, Dumbeg, Urap Latoh) |
 | Destinasi ber-koordinat | **10** dari 10 (100% lengkap & terverifikasi OSM) |
 | Pencarian statis (Pagefind) | **Aktif & bilingual** (35 id-id / 35 en-us), modal keyboard-accessible |
 | `astro check` | **0 error / 0 warning / 0 hint** |
@@ -176,14 +176,14 @@ Selalu klik tautan, lalu verifikasi interaksi masih hidup.
 | destinasi | 10 | 10 | pantai, museum, religi, hutan, embung |
 | **galeri** | **6** | **6** | ✅ album tematik: Lasem Tiongkok Kecil, Batik Tiga Negeri, Panggung dan Warisan, Napak Tilas R.A. Kartini, Pesisir dan Pantai, Kuliner Pesisir |
 
-**Judul ber-cover (21):** batik-tulis-lasem, klenteng-dan-masjid-lasem, lasem-tiongkok-kecil,
+**Judul ber-cover (24):** batik-tulis-lasem, klenteng-dan-masjid-lasem, lasem-tiongkok-kecil,
 kartini-dan-sunan-bonang, rembang-gerbang-timur, pantai-caruban, pantai-wates, petilasan-sunan-bonang,
 legen, kopi-lelet, wayang-potehi-dan-seni-pertunjukan, hutan-mangrove-rembang, klenteng-cu-an-kiong,
 klenteng-gie-yong-bio, makam-kartini, museum-kartini, pantai-karang-jahe, lontong-tuyuhan, sate-srepeh,
-mangut-manyung, asal-usul-nama-rembang.
+mangut-manyung, asal-usul-nama-rembang, tradisi-laut, dumbeg, urap-latoh.
 
-**Belum ber-cover (6, sengaja):** tradisi-laut, embung-lodan, dumbeg, kaoya-dudul, kelo-mrico,
-urap-latoh. Tidak ada foto Commons yang benar-benar cocok; jangan pasang foto generik.
+**Belum ber-cover (3, sengaja):** embung-lodan, kaoya-dudul, kelo-mrico. Tidak ada foto Commons
+yang benar-benar cocok; menampilkan placeholder ornamen batik SVG yang jujur dan estetik.
 
 **Koordinat peta (10/10 destinasi — 100% lengkap):** pantai-karang-jahe, museum-kartini,
 pantai-caruban, klenteng-gie-yong-bio, hutan-mangrove-rembang, makam-kartini (Bulu), pantai-wates
