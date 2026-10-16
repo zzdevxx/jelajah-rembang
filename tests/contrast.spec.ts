@@ -34,7 +34,13 @@ for (const theme of ['light', 'dark'] as const) {
     for (const path of PAGES) {
       test(path, async ({ page }) => {
         await page.addInitScript(
-          ([t]) => { try { localStorage.setItem('rembang-theme', t as string); } catch {} },
+          ([t]) => {
+            try {
+              localStorage.setItem('rembang-theme', t as string);
+            } catch (err) {
+              console.warn('localStorage theme init failed:', err);
+            }
+          },
           [theme],
         );
         await page.goto(path);

@@ -100,12 +100,12 @@ const dict = {
 
     'sejarah.title': 'Sejarah',
     'sejarah.lead':
-      'Dari jalur dagang pesisir masa Majapahit hingga tanah kelahiran R.A. Kartini — rekam jejak sebuah kota pelabuhan.',
+      'Dari jalur dagang pesisir masa Majapahit hingga tanah kelahiran R.A. Kartini: rekam jejak sebuah kota pelabuhan.',
     'sejarah.timeline': 'Garis waktu',
 
     'budaya.title': 'Budaya',
     'budaya.lead':
-      'Batik tiga negeri, klenteng tua, wayang potehi, dan tradisi laut — warisan akulturasi yang masih hidup.',
+      'Batik tiga negeri, klenteng tua, wayang potehi, dan tradisi laut: warisan akulturasi yang masih hidup.',
 
     'kuliner.title': 'Kuliner',
     'kuliner.lead':
@@ -124,7 +124,7 @@ const dict = {
     'profil.climate': 'Iklim',
 
     'galeri.title': 'Galeri',
-    'galeri.lead': 'Rembang dalam gambar — warisan, lanskap, dan kehidupan sehari-hari.',
+    'galeri.lead': 'Rembang dalam gambar: warisan, lanskap, dan kehidupan sehari-hari.',
     'galeri.openImage': 'Perbesar gambar',
     'galeri.close': 'Tutup',
     'galeri.prev': 'Sebelumnya',
@@ -213,12 +213,12 @@ const dict = {
 
     'sejarah.title': 'History',
     'sejarah.lead':
-      'From the coastal trade routes of the Majapahit era to the birthplace of R.A. Kartini — the record of a port town.',
+      'From the coastal trade routes of the Majapahit era to the birthplace of R.A. Kartini: the record of a port town.',
     'sejarah.timeline': 'Timeline',
 
     'budaya.title': 'Culture',
     'budaya.lead':
-      'Batik of three lands, old temples, potehi puppetry, and sea traditions — a living heritage of acculturation.',
+      'Batik of three lands, old temples, potehi puppetry, and sea traditions: a living heritage of acculturation.',
 
     'kuliner.title': 'Cuisine',
     'kuliner.lead':
@@ -237,7 +237,7 @@ const dict = {
     'profil.climate': 'Climate',
 
     'galeri.title': 'Gallery',
-    'galeri.lead': 'Rembang in images — heritage, landscape, and daily life.',
+    'galeri.lead': 'Rembang in images: heritage, landscape, and daily life.',
     'galeri.openImage': 'Enlarge image',
     'galeri.close': 'Close',
     'galeri.prev': 'Previous',

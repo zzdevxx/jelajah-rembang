@@ -80,7 +80,7 @@ const KECAMATAN = [
   collection="beranda"
 >
   <PagefindBody>
-    <!-- ============ HERO ============ -->
+    <!-- Hero -->
     <section class="relative overflow-hidden border-b border-rule">
     <!-- Kisi canting: motif identitas, bukan latar penuh (R-07) -->
     <div class="canting-rule absolute inset-x-0 top-0" aria-hidden="true"></div>
@@ -155,14 +155,14 @@ const KECAMATAN = [
     </div>
   </section>
 
-  <!-- ============ FAKTA SINGKAT ============ -->
+  <!-- Fakta singkat -->
   <section class="border-b border-rule bg-paper-sunken">
     <div class="container-page grid grid-cols-2 gap-x-8 gap-y-6 py-10 md:grid-cols-4">
       {FACTS.map((f, i) => <div data-reveal style={`--i:${i}`}><StatBlock label={f.label} value={f.value} note={f.note} count={f.count} /></div>)}
     </div>
   </section>
 
-  <!-- ============ SEKSI ============ -->
+  <!-- Seksi utama -->
   <section class="container-page section-rhythm">
     <div data-reveal>
       <SectionHeading title={t('home.sectionsTitle', lang)} />
@@ -193,7 +193,7 @@ const KECAMATAN = [
     </div>
   </section>
 
-  <!-- ============ KULINER UNGGULAN ============ -->
+  <!-- Kuliner unggulan -->
   {
     featuredKuliner.length > 0 && (
       <section class="border-y border-rule bg-paper-sunken">
@@ -204,7 +204,7 @@ const KECAMATAN = [
               href={localizePath('/kuliner', lang)}
               class="text-sm font-semibold text-merah transition-colors hover:text-merah-deep"
             >
-              {t('common.viewAll', lang)} →
+              {t('common.viewAll', lang)}
             </a>
           </div>
           <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -219,7 +219,7 @@ const KECAMATAN = [
     )
   }
 
-  <!-- ============ DESTINASI UNGGULAN ============ -->
+  <!-- Destinasi unggulan -->
   {
     featuredDestinasi.length > 0 && (
       <section class="container-page section-rhythm">
@@ -229,7 +229,7 @@ const KECAMATAN = [
             href={localizePath('/destinasi', lang)}
             class="text-sm font-semibold text-merah transition-colors hover:text-merah-deep"
           >
-            {t('common.viewAll', lang)} →
+            {t('common.viewAll', lang)}
           </a>
         </div>
         <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -243,7 +243,7 @@ const KECAMATAN = [
     )
   }
 
-  <!-- ============ AJAKAN PETA ============ -->
+  <!-- Ajakan peta -->
   <section class="border-t border-rule bg-paper-sunken">
     <div class="container-page grid gap-8 py-16 md:grid-cols-[1.2fr_1fr] md:items-center md:gap-16">
       <div data-reveal>
