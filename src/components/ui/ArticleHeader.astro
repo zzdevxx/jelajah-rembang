@@ -1,7 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 import type { ImageMetadata } from 'astro';
-import BatikMotif from './BatikMotif.astro';
+import HeritagePlate from './HeritagePlate.astro';
 
 interface Props {
   title: string;
@@ -53,8 +53,10 @@ const { title, lead, cover, coverAlt, meta = [], motif = 'kawung' } = Astro.prop
             </div>
           </div>
         ) : (
-          <div class="hidden justify-end text-rule lg:flex" aria-hidden="true">
-            <BatikMotif size={220} variant={motif} />
+          <div class="hidden justify-end lg:flex" aria-hidden="true">
+            <div class="frame-plate w-full max-w-sm rounded-card">
+              <HeritagePlate variant={motif} aspect="4/3" label="Wastra Rembang" />
+            </div>
           </div>
         )
       }

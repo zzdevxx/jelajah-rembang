@@ -7,15 +7,15 @@ const LIVE = 'https://jelajah-rembang.zzdree.workers.dev';
 test.describe('verifikasi live', () => {
   test.use({ baseURL: LIVE });
 
-  test('beranda melayani palet "Pesisir Segar" baru', async ({ page }) => {
+  test('beranda melayani palet "Bahari Karang" baru', async ({ page }) => {
     await page.goto('/');
-    // Kertas putih bersih & tinta biru-arang (Pesisir Segar), bukan krem/coklat "Arsip Pesisir".
+    // Kertas putih garam laut sejuk & arang samudera dalam (Bahari Karang), bukan krem/coklat "Arsip Pesisir".
     const colors = await page.evaluate(() => {
       const cs = getComputedStyle(document.body);
       return { bg: cs.backgroundColor, color: cs.color };
     });
-    expect(colors.bg).toBe('rgb(255, 255, 255)');
-    expect(colors.color).toBe('rgb(19, 32, 41)');
+    expect(colors.bg).toBe('rgb(248, 250, 252)');
+    expect(colors.color).toBe('rgb(15, 23, 42)');
 
     // Judul memakai sans Hanken Grotesk (satu keluarga, tanpa serif).
     const h1Font = await page.locator('h1').first().evaluate((el) => getComputedStyle(el).fontFamily);

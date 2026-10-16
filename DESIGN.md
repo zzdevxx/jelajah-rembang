@@ -1,36 +1,36 @@
 ---
 schemaVersion: 2
-name: Pesisir Segar
-description: Sistem desain untuk situs profil Kabupaten Rembang — fresh coastal: kertas putih bersih, tinta biru-arang, tiga warna aksen pesisir (merah Lasem, teal laut, indigo wedel), satu keluarga sans.
+name: Bahari Karang
+description: Sistem desain untuk situs profil Kabupaten Rembang — oceanic slate & ruby Lasem: kanvas putih garam laut sejuk (#F8FAFC), arang samudera dalam (#0F172A), tiga warna aksen bahari kultural (merah delima Lasem #C81E2B, biru bahari #0284C7, zamrud ombak #0A6B79), satu keluarga sans.
 
 colors:
-  # --- Tiga warna aksen pesisir (segar) ---
-  merah-lasem: '#c1272d'
-  merah-lasem-deep: '#9c1c22'
-  indigo-lasem: '#1e3a8a'
-  soga: '#0e6e7d'
+  # --- Tiga warna aksen pesisir (segar, berwibawa, saturasi tinggi) ---
+  merah-lasem: '#c81e2b'
+  merah-lasem-deep: '#991b1b'
+  indigo-lasem: '#0369a1'
+  soga: '#0a6b79'
 
-  # --- Permukaan terang (kertas putih bersih) ---
-  paper: '#ffffff'
+  # --- Permukaan terang (putih garam laut sejuk & bercahaya) ---
+  paper: '#f8fafc'
   paper-raised: '#ffffff'
-  paper-sunken: '#f4f6f8'
-  ink: '#132029'
-  ink-soft: '#4a5a63'
-  rule: '#d8dee3'
-  focus: '#c1272d'
-  scrim: '#132029'
+  paper-sunken: '#f1f5f9'
+  ink: '#0f172a'
+  ink-soft: '#475569'
+  rule: '#e2e8f0'
+  focus: '#c81e2b'
+  scrim: '#0f172a'
 
-  # --- Permukaan gelap (arang biru) ---
-  paper-dark: '#0e1418'
-  paper-dark-raised: '#172026'
-  paper-dark-sunken: '#080c0f'
-  ink-dark: '#eef3f5'
-  ink-soft-dark: '#9fb0b8'
-  rule-dark: '#2a363d'
-  merah-lasem-dark: '#f0716f'
-  merah-lasem-deep-dark: '#f79b99'
-  indigo-lasem-dark: '#93a7f0'
-  soga-dark: '#5fc9d6'
+  # --- Permukaan gelap (samudera malam dalam) ---
+  paper-dark: '#0b1120'
+  paper-dark-raised: '#131c31'
+  paper-dark-sunken: '#070a12'
+  ink-dark: '#f1f5f9'
+  ink-soft-dark: '#94a3b8'
+  rule-dark: '#1e293b'
+  merah-lasem-dark: '#f87171'
+  merah-lasem-deep-dark: '#fca5a5'
+  indigo-lasem-dark: '#38bdf8'
+  soga-dark: '#2dd4bf'
 
 typography:
   display:

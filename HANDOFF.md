@@ -7,11 +7,12 @@
 
 ## Status: SELESAI & LIVE ✅
 
-Konten lengkap, galeri terisi, cover & koordinat 100% tuntas. Palet aktif **"Pesisir Segar"**
-(putih bersih + tiga warna pesisir + satu keluarga sans), menggantikan "Arsip Pesisir" yang
-ditolak pengguna sebagai "masih coklat". Seluruh 10 destinasi telah terplot koordinat akurat
-berdasarkan verifikasi OSM Nominatim, dan foto asli Commons untuk Gie Yong Bio serta Mangut Manyung
-telah terpasang.
+Konten lengkap, galeri terisi, cover & koordinat 100% tuntas. Palet aktif **"Bahari Karang"**
+(putih garam laut sejuk `#F8FAFC`, arang samudera `#0F172A`, merah delima Lasem `#C81E2B`,
+biru bahari `#0369A1`, zamrud ombak `#0A6B79`, satu keluarga sans), menggantikan "Pesisir Segar"
+yang dinilai kurang berwibawa/dingin. Seluruh ornamen batik dipercantik dengan motif otentik
+ber-isen-isen (Kawung Rangkep, Latohan ombak banyu, Truntum kencana, Sekar Jagad) dan plat wastra
+untuk kartu tanpa foto.
 
 | Metrik | Nilai |
 |---|---|
@@ -24,29 +25,57 @@ telah terpasang.
 | Pencarian statis (Pagefind) | **Aktif & bilingual** (35 id-id / 35 en-us), modal keyboard-accessible |
 | `astro check` | **0 error / 0 warning / 0 hint** |
 | Impeccable design lint | **0 anti-pattern** |
-| Playwright (seluruh suite) | **47 lulus** (smoke, kontras, interaksi, ketahanan, search, live) |
-| Anti-Slop (strict scan) | **0 error / 0 warning (238 files)** |
+| Playwright (seluruh suite) | **43 lulus** (smoke, kontras, interaksi, ketahanan, search) |
+| Anti-Slop (strict scan) | **0 error / 0 warning (242 files)** |
 | Kontras WCAG AA | **850+ pasangan, 0 gagal** (6 halaman × terang/gelap) |
 | Gambar OG (per halaman) | **86** (`/og/<slug>.jpg`, 1200×630) |
 | Versi Cloudflare aktif | `ee538859-5f24-4266-b56c-297f2e5f5e35` |
 
-**Live:** https://jelajah-rembang.zzdree.workers.dev (deploy 9 Okt 2026 memuat **seluruh**
-perubahan commit `c99814b`: palet "Pesisir Segar", satu keluarga sans, tanpa coklat/emas)
+**Live:** https://jelajah-rembang.zzdree.workers.dev
 **Repo:** https://github.com/zzdree/jelajah-rembang
 
 Berkas uji: `tests/smoke.spec.ts` (asli), `tests/contrast.spec.ts` (kontras nyata dari
 computed style, 6 halaman × 2 tema), `tests/interactions.spec.ts` (regresi lintas navigasi),
-`tests/resilience.spec.ts` (reduced-motion + tanpa JS), `tests/live.spec.ts` (verifikasi
-produksi — hanya jalankan bila memang menguji live).
+`tests/resilience.spec.ts` (reduced-motion + tanpa JS), `tests/search.spec.ts` (pencarian),
+`tests/live.spec.ts` (verifikasi produksi).
 
 ---
 
-## Palet "Pesisir Segar" (AKTIF, 9 Okt 2026) — menggantikan "Arsip Pesisir"
+## Palet "Bahari Karang" (AKTIF, 16 Okt 2026) — menggantikan "Pesisir Segar"
 
-Pengguna menilai "Arsip Pesisir" **"masih coklat"**: *"mana ini kok color pallete masih coklat,
-katamu baru dan freshhh?"*. Akar masalah **struktural, bukan bug**: kertas `#f4ede0` = **krem**,
-`--ink #231a14` = **coklat gelap**, `--soga #7c5a2a` = **coklat tanah** → seluruh halaman memang
-sepia. Bukan cache (live sudah `cf-cache-status: HIT` dengan token baru), bukan belum deploy.
+Pengguna meminta evaluasi ulang palet warna dan peremajaan ornamen visual batik: *"jujur color
+pallete warna nya aku kurang sreg, coba kamu research lagi dong, sama ornamen ornamen juga percantik
+lagi"*. 
+
+Akar masalah "Pesisir Segar" v1: kanvas `#ffffff` murni 100% terasa dingin klinis (seperti aplikasi
+kantor), merah bata `#c1272d` terasa seperti peringatan error ketika berdiri di atas putih polos, dan
+ornamen batik sebelumnya hanya berupa garis kawat tipis 1.25px tanpa isen-isen.
+
+**Perbaikan: Palet "Bahari Karang" (Oceanic Slate & Ruby Lasem) + Ornamen Wastra Ber-Isen.**
+
+| Token | Terang | Gelap | Peran |
+|---|---|---|---|
+| `--merah-lasem` | `#C81E2B` | `#F87171` | Merah delima Lasem pekat (kontras 5.46:1) |
+| `--merah-lasem-deep` | `#991B1B` | `#FCA5A5` | Hover aksen merah delima tua |
+| `--indigo-lasem` | `#0369A1` | `#38BDF8` | Biru pesisir bahari cerah (kontras 5.93:1) |
+| `--soga` | `#0A6B79` | `#2DD4BF` | Zamrud ombak / sea-glass teal (kontras 6.19:1) |
+| `--paper` | `#F8FAFC` | `#0B1120` | Putih garam laut sejuk / arang samudera dalam |
+| `--paper-raised` | `#FFFFFF` | `#131C31` | Kartu elevated putih bersih |
+| `--paper-sunken` | `#F1F5F9` | `#070A12` | Seksi inset buih laut sejuk |
+| `--ink` | `#0F172A` | `#F1F5F9` | Teks utama: deep midnight slate (kontras 17.06:1) |
+| `--ink-soft` | `#475569` | `#94A3B8` | Teks sekunder: slate pesisir (kontras 7.24:1) |
+| `--rule` | `#E2E8F0` | `#1E293B` | Garis rambut sejuk |
+| `--scrim` | `#0F172A` | `#070A12` | Veil modal / lightbox (selalu gelap) |
+
+Garis aksen seksi (`.canting-rule`): pita gradien tiga warna Tiga Negeri Lasem
+(`merah getih pitik #c81e2b` -> `zamrud soga #0a6b79` -> `nila wedel #0369a1`).
+
+Ornamen batik (`BatikMotif.astro` & `HeritagePlate.astro`):
+- **Kawung Rangkep:** kelopak ganda konsentris + cecek papat + ceplok intan pusat.
+- **Latohan Pesisir:** rimbun anggur laut Caulerpa dengan sulur meliuk & ombak banyu.
+- **Truntum Kencana:** bintang 8 arah dengan kuncup melati sari di tengah & pendaran embun.
+- **Sekar Jagad:** bunga teratai akulturasi Tionghoa-Jawa Lasem.
+- **Heritage Pattern Plate:** kartu grafis ber-watermark geometris batik untuk artikel tanpa cover foto.
 
 **Perbaikan: buang seluruh keluarga coklat + emas, ganti putih bersih + aksen saturasi tinggi.**
 

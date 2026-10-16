@@ -5,31 +5,32 @@
 @import '@fontsource-variable/martian-mono';
 
 /* ==========================================================================
-   Pesisir Segar — token sistem desain (revisi "Fresh Coastal", 9 Okt 2026)
+   Bahari Karang — token sistem desain (revisi "Oceanic Slate & Ruby Lasem", 16 Okt 2026)
    Sumber kebenaran: DESIGN.md. Ubah di sana lebih dulu, lalu di sini (byte-sinkron).
-   SEGAR & BERSIH: kertas PUTIH murni, tinta biru-arang, tiga warna aksen pesisir
-   (merah Lasem bata, teal laut, indigo wedel). TANPA coklat/sepia, TANPA emas.
+   SEGAR & BERSIH: kertas putih garam laut bercahaya (#F8FAFC), arang samudera dalam (#0F172A),
+   tiga aksen bahari kultural (merah delima Lasem pekat #C81E2B, biru bahari #0284C7,
+   zamrud ombak #0A6B79). TANPA coklat/sepia/krem dekil, TANPA emas kusam.
    Satu keluarga sans (Hanken Grotesk) untuk display & body; Martian Mono untuk data.
    Flat: tanpa gradien, tanpa glass, tanpa soft shadow. Semua pasangan lolos AA.
    ========================================================================== */
 
 :root {
-  /* --- Tiga warna aksen pesisir (segar, saturasi tinggi) --- */
-  --merah-lasem: #c1272d; /* Lasem bata */
-  --merah-lasem-deep: #9c1c22;
-  --indigo-lasem: #1e3a8a; /* wedel: biru batik indigo */
-  --soga: #0e6e7d; /* teal laut (peran "soga" lama) */
+  /* --- Tiga warna aksen pesisir (segar, berwibawa, saturasi tinggi) --- */
+  --merah-lasem: #c81e2b; /* Merah delima Lasem pekat */
+  --merah-lasem-deep: #991b1b;
+  --indigo-lasem: #0369a1; /* Biru pesisir bahari cerah (kontras 5.93:1) */
+  --soga: #0a6b79; /* Zamrud ombak / sea-glass teal */
 
-  /* --- Permukaan & teks (terang, kertas putih bersih) --- */
-  --paper: #ffffff;
+  /* --- Permukaan & teks (terang, putih garam laut sejuk & bercahaya) --- */
+  --paper: #f8fafc;
   --paper-raised: #ffffff;
-  --paper-sunken: #f4f6f8;
-  --ink: #132029; /* biru-arang, bukan coklat */
-  --ink-soft: #4a5a63;
-  --rule: #d8dee3;
-  --focus: #c1272d;
+  --paper-sunken: #f1f5f9;
+  --ink: #0f172a; /* arang samudera dalam, sangat tajam & berwibawa */
+  --ink-soft: #475569; /* slate pesisir sejuk */
+  --rule: #e2e8f0;
+  --focus: #c81e2b;
   /* Veil overlay (scrim): SELALU gelap, sengaja tidak dibalik oleh tema. */
-  --scrim: #132029;
+  --scrim: #0f172a;
 
   /* --- Skala & irama --- */
   --radius-control: 2px;
@@ -54,20 +55,20 @@
 }
 
 [data-theme='dark'] {
-  --merah-lasem: #f0716f;
-  --merah-lasem-deep: #f79b99;
+  --merah-lasem: #f87171;
+  --merah-lasem-deep: #fca5a5;
 
-  --indigo-lasem: #93a7f0;
-  --soga: #5fc9d6;
+  --indigo-lasem: #38bdf8;
+  --soga: #2dd4bf;
 
-  --paper: #0e1418; /* arang biru, bukan hitam dingin */
-  --paper-raised: #172026;
-  --paper-sunken: #080c0f;
-  --ink: #eef3f5; /* putih sejuk */
-  --ink-soft: #9fb0b8;
-  --rule: #2a363d;
-  --focus: #f0716f;
-  --scrim: #080c0f;
+  --paper: #0b1120; /* samudera malam dalam */
+  --paper-raised: #131c31; /* kartu malam bertekstur tenang */
+  --paper-sunken: #070a12;
+  --ink: #f1f5f9; /* putih es sejuk */
+  --ink-soft: #94a3b8;
+  --rule: #1e293b;
+  --focus: #f87171;
+  --scrim: #070a12;
 
   color-scheme: dark;
 }
@@ -285,10 +286,10 @@
   border-color: var(--rule);
 }
 
-/* Penanda seksi: satu garis aksen solid (flat, bukan pola) */
+/* Penanda seksi: pita aksen Tiga Negeri Lasem (merah getih pitik, zamrud soga, nila wedel) */
 .canting-rule {
   height: 2px;
-  background: var(--merah-lasem);
+  background: linear-gradient(90deg, var(--merah-lasem) 0%, var(--soga) 55%, var(--indigo-lasem) 100%);
 }
 
 /* Lempeng bersih: foto dibingkai garis rambut tipis (tanpa bayangan). */

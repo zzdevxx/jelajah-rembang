@@ -1,0 +1,89 @@
+---
+/**
+ * Plat Wastra Warisan (Heritage Pattern Plate).
+ *
+ * Dipakai saat sebuah artikel atau kartu tidak memiliki foto dokumentasi Commons
+ * yang terverifikasi (mis. Kelo Mrico, Kaoya Dudul, Embung Lodan).
+ *
+ * Alih-alih kotak abu-abu kosong dengan ikon generik (yang melanggar anti-slop
+ * dan terkesan rusak), komponen ini menampilkan plat grafis wastra pesisir
+ * yang anggun:
+ * - Latar bermotif watermark geometris batik halus
+ * - Medallion emblem motif batik ber-isen di tengah (Kawung, Latohan, atau Sekar Jagad)
+ * - Garis bingkai ganda dan aksen kultural khas Lasem
+ */
+import BatikMotif from './BatikMotif.astro';
+
+interface Props {
+  variant?: 'kawung' | 'truntum' | 'latohan' | 'sekar-jagad';
+  aspect?: '4/3' | '16/10' | 'auto';
+  label?: string;
+  class?: string;
+}
+
+const {
+  variant = 'latohan',
+  aspect = '4/3',
+  label,
+  class: className,
+} = Astro.props;
+
+const aspectClass =
+  aspect === '4/3'
+    ? 'aspect-[4/3]'
+    : aspect === '16/10'
+      ? 'aspect-[16/10]'
+      : 'h-full';
+---
+
+<div
+  class:list={[
+    'relative flex w-full flex-col items-center justify-center overflow-hidden border-b border-rule bg-paper-sunken p-6 text-center select-none',
+    aspectClass,
+    className,
+  ]}
+  aria-hidden="true"
+>
+  {/* Latar watermark pola geometris batik berulang */}
+  <svg
+    class="absolute inset-0 h-full w-full opacity-[0.06] text-ink"
+    xmlns="http://www.w3.org/2000/svg"
+    width="100%"
+    height="100%"
+  >
+    <defs>
+      <pattern id="batik-grid" width="40" height="40" patternUnits="userSpaceOnUse">
+        <circle cx="20" cy="20" r="16" fill="none" stroke="currentColor" stroke-width="1" />
+        <ellipse cx="20" cy="10" rx="4" ry="7" fill="none" stroke="currentColor" stroke-width="0.8" />
+        <ellipse cx="20" cy="30" rx="4" ry="7" fill="none" stroke="currentColor" stroke-width="0.8" />
+        <ellipse cx="10" cy="20" rx="7" ry="4" fill="none" stroke="currentColor" stroke-width="0.8" />
+        <ellipse cx="30" cy="20" rx="7" ry="4" fill="none" stroke="currentColor" stroke-width="0.8" />
+        <circle cx="20" cy="20" r="2" fill="currentColor" />
+        <circle cx="0" cy="0" r="2" fill="currentColor" />
+        <circle cx="40" cy="0" r="2" fill="currentColor" />
+        <circle cx="0" cy="40" r="2" fill="currentColor" />
+        <circle cx="40" cy="40" r="2" fill="currentColor" />
+      </pattern>
+    </defs>
+    <rect width="100%" height="100%" fill="url(#batik-grid)" />
+  </svg>
+
+  {/* Bingkai rambut dalam ganda */}
+  <div class="pointer-events-none absolute inset-2.5 rounded-hairline border border-rule/70"></div>
+  <div class="pointer-events-none absolute inset-3.5 rounded-hairline border border-rule/40 border-dashed"></div>
+
+  {/* Medallion ornamen batik di tengah */}
+  <div class="relative z-10 flex flex-col items-center justify-center gap-2">
+    <div class="relative flex items-center justify-center rounded-full border border-rule bg-paper-raised/90 p-3.5 text-soga shadow-none transition-transform duration-300 group-hover:scale-105 group-hover:text-merah motion-reduce:transition-none">
+      <BatikMotif size={56} variant={variant} />
+    </div>
+
+    {
+      label && (
+        <span class="label-caps mt-1 text-2xs tracking-widest text-ink-soft/80">
+          {label}
+        </span>
+      )
+    }
+  </div>
+</div>
