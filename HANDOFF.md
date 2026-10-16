@@ -24,10 +24,11 @@ telah terpasang.
 | Pencarian statis (Pagefind) | **Aktif & bilingual** (35 id-id / 35 en-us), modal keyboard-accessible |
 | `astro check` | **0 error / 0 warning / 0 hint** |
 | Impeccable design lint | **0 anti-pattern** |
-| Playwright (seluruh suite) | **43 lulus** (smoke, kontras, interaksi, ketahanan, search) |
+| Playwright (seluruh suite) | **47 lulus** (smoke, kontras, interaksi, ketahanan, search, live) |
+| Anti-Slop (strict scan) | **0 error / 0 warning (238 files)** |
 | Kontras WCAG AA | **850+ pasangan, 0 gagal** (6 halaman × terang/gelap) |
 | Gambar OG (per halaman) | **86** (`/og/<slug>.jpg`, 1200×630) |
-| Versi Cloudflare aktif | `15b28fdc-0cba-4209-a94f-2efed6639a5b` |
+| Versi Cloudflare aktif | `bf43edb7-0cdb-4a89-8cb9-08426048234a` |
 
 **Live:** https://jelajah-rembang.zzdree.workers.dev (deploy 9 Okt 2026 memuat **seluruh**
 perubahan commit `c99814b`: palet "Pesisir Segar", satu keluarga sans, tanpa coklat/emas)
