@@ -28,7 +28,7 @@ telah terpasang.
 | Anti-Slop (strict scan) | **0 error / 0 warning (238 files)** |
 | Kontras WCAG AA | **850+ pasangan, 0 gagal** (6 halaman × terang/gelap) |
 | Gambar OG (per halaman) | **86** (`/og/<slug>.jpg`, 1200×630) |
-| Versi Cloudflare aktif | `bf43edb7-0cdb-4a89-8cb9-08426048234a` |
+| Versi Cloudflare aktif | `ee538859-5f24-4266-b56c-297f2e5f5e35` |
 
 **Live:** https://jelajah-rembang.zzdree.workers.dev (deploy 9 Okt 2026 memuat **seluruh**
 perubahan commit `c99814b`: palet "Pesisir Segar", satu keluarga sans, tanpa coklat/emas)
