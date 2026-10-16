@@ -21,9 +21,9 @@ order: 1
 featured: true
 updated: 2026-10-09
 sources:
-  - Wikipedia Bahasa Indonesia — Sate Srepeh
-  - Detik Jateng — 5 Kuliner Khas Kabupaten Rembang
-  - Visit Jawa Tengah — Wisata Kuliner Kabupaten Rembang
+  - "Wikipedia Bahasa Indonesia : Sate Srepeh"
+  - "Detik Jateng : 5 Kuliner Khas Kabupaten Rembang"
+  - "Visit Jawa Tengah : Wisata Kuliner Kabupaten Rembang"
 ---
 
 Sate srepeh adalah hidangan yang paling sering disebut ketika orang bertanya apa makanan khas Rembang. Sekilas ia tampak seperti sate ayam biasa, tetapi begitu sampai di meja, tampilannya langsung membedakan diri: bukan bumbu kacang kental berwarna cokelat, melainkan **kuah bumbu kemerahan yang encer dan bersantan**.

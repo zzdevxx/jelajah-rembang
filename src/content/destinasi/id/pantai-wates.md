@@ -3,9 +3,10 @@ translationKey: pantai-wates
 cover: ../../../assets/destinasi/pantai-wates.jpg
 coverAlt: "Pantai Pasir Putih Wates di Rembang."
 title: Pantai Wates
-summary: Pantai pasir putih yang lebih tenang di Kecamatan Pancur, dengan air jernih dan suasana yang belum seramai pantai lain di Rembang.
+summary: Pantai pasir putih yang lebih tenang di Kecamatan Kaliori, dengan air jernih dan suasana yang belum seramai pantai lain di Rembang.
 kind: pantai
-kecamatan: Pancur
+kecamatan: Kaliori
+coords: [-6.6888, 111.2810]
 tags:
   - pantai
   - pasir putih
@@ -18,7 +19,7 @@ sources:
   - "Visit Jawa Tengah : Wisata Pantai Kabupaten Rembang"
 ---
 
-Pantai Wates, yang juga dikenal sebagai Pantai Pasir Putih Wates, adalah salah satu tujuan pesisir yang lebih baru dibuka untuk umum di Kabupaten Rembang. Letaknya di Kecamatan Pancur, di sisi barat kabupaten. Karena belum selama dan seramai pantai-pantai lain, suasana di sini terasa lebih tenang dan sederhana.
+Pantai Wates, yang juga dikenal sebagai Pantai Pasir Putih Wates, adalah salah satu tujuan pesisir yang lebih baru dibuka untuk umum di Kabupaten Rembang. Letaknya di Desa Tasikharjo, Kecamatan Kaliori, di sisi barat kabupaten. Karena belum selama dan seramai pantai-pantai lain, suasana di sini terasa lebih tenang dan sederhana.
 
 ## Pantai yang lebih sepi
 

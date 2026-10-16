@@ -6,6 +6,7 @@ title: Petilasan dan Makam Sunan Bonang
 summary: Kompleks masjid, pasujudan, makam Sunan Bonang, makam Putri Campa, dan gong Bende Becak di Desa Bonang, Lasem. Tujuan wisata religi.
 kind: religi
 kecamatan: Lasem
+coords: [-6.6598, 111.4680]
 tags:
   - religi
   - ziarah

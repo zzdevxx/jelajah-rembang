@@ -14,9 +14,9 @@ order: 1
 featured: true
 updated: 2026-10-09
 sources:
-  - Wikipedia Bahasa Indonesia — Batik Lasem
-  - UNESCO — Indonesian Batik, Representative List of the Intangible Cultural Heritage of Humanity (2009)
-  - ANRI — Arsip Dagang Batik Lasem, Memori Kolektif Bangsa (2024)
+  - "Wikipedia Bahasa Indonesia : Batik Lasem"
+  - "UNESCO : Indonesian Batik, Representative List of the Intangible Cultural Heritage of Humanity (2009)"
+  - "ANRI : Arsip Dagang Batik Lasem, Memori Kolektif Bangsa (2024)"
 ---
 
 Batik Lasem adalah batik pesisir. Ia tumbuh di kota pelabuhan, jauh dari dinding keraton, dan karena itu tidak terikat pakem yang mengatur batik Solo maupun Yogyakarta. Batik keraton menuntut aturan warna dan motif yang ketat; batik Lasem justru terbuka. Siapa pun boleh memakainya, dari keluarga bangsawan sampai pedagang dan buruh, dari warga Jawa sampai warga Tionghoa. Keterbukaan itulah yang membuat Lasem melahirkan bahasa visual yang tidak ditemukan di tempat lain.

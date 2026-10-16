@@ -4,6 +4,7 @@ title: Embung Lodan
 summary: Embung kecil di Kecamatan Sarang, distrik paling timur Rembang, dekat perbatasan Jawa Timur. Dipakai untuk irigasi, dengan latar perbukitan kapur.
 kind: embung
 kecamatan: Sarang
+coords: [-6.7947, 111.6087]
 tags:
   - embung
   - perbukitan

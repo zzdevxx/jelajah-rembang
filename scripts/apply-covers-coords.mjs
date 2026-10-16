@@ -34,14 +34,25 @@ const COVERS = [
     alt: { id: 'Lontong tuyuhan dalam kuah santan kuning.', en: 'Lontong tuyuhan in a yellow coconut broth.' } },
   { koleksi: 'kuliner', slug: 'sate-srepeh', cover: '../../../assets/galeri/kuliner-pesisir/sate-srepeh.jpg',
     alt: { id: 'Sate srepeh khas Rembang.', en: 'Sate srepeh, a Rembang specialty.' } },
+  { koleksi: 'destinasi', slug: 'klenteng-gie-yong-bio', cover: '../../../assets/destinasi/klenteng-gie-yong-bio.jpg',
+    alt: { id: 'Kelenteng Gie Yong Bio di Lasem.', en: 'Gie Yong Bio Temple in Lasem.' } },
+  { koleksi: 'kuliner', slug: 'mangut-manyung', cover: '../../../assets/kuliner/mangut-manyung.jpg',
+    alt: { id: 'Mangut kepala ikan manyung khas pesisir.', en: 'Smoked manyung fish head curry.' } },
   { koleksi: 'sejarah', slug: 'asal-usul-nama-rembang', cover: '../../../assets/galeri/pesisir-dan-pantai/pelabuhan-rembang-01.jpg',
     alt: { id: 'Pelabuhan Rembang di pesisir utara.', en: 'The port of Rembang on the north coast.' } },
 ];
 
 const COORDS = [
+  { slug: 'pantai-karang-jahe', coords: '[-6.6911, 111.4147]' },
   { slug: 'pantai-caruban', coords: '[-6.6786, 111.4288]' },
+  { slug: 'pantai-wates', coords: '[-6.6888, 111.2810]' },
+  { slug: 'museum-kartini', coords: '[-6.7064, 111.3503]' },
+  { slug: 'makam-kartini', coords: '[-6.8625, 111.4064]' },
+  { slug: 'petilasan-sunan-bonang', coords: '[-6.6598, 111.4680]' },
+  { slug: 'klenteng-cu-an-kiong', coords: '[-6.6944, 111.4439]' },
   { slug: 'klenteng-gie-yong-bio', coords: '[-6.6957, 111.4404]' },
   { slug: 'hutan-mangrove-rembang', coords: '[-6.6973, 111.3882]' },
+  { slug: 'embung-lodan', coords: '[-6.7947, 111.6087]' },
 ];
 
 const quote = (s) => `"${String(s).replace(/"/g, '\\"')}"`;

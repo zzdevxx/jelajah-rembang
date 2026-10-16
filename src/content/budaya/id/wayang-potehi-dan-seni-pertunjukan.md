@@ -14,9 +14,9 @@ order: 3
 featured: true
 updated: 2026-10-09
 sources:
-  - Wikipedia Bahasa Indonesia — Wayang Potehi
-  - Kemdikbud — Wayang Potehi dan Seni Tradisi Lasem
-  - Pemerintah Kabupaten Rembang — Festival Seni Budaya Lasem
+  - "Wikipedia Bahasa Indonesia : Wayang Potehi"
+  - "Kemdikbud : Wayang Potehi dan Seni Tradisi Lasem"
+  - "Pemerintah Kabupaten Rembang : Festival Seni Budaya Lasem"
 ---
 
 Kalau ada satu hal yang membuat panggung Lasem berbeda, itu adalah pertemuan antara tradisi Tionghoa dan Jawa. Keduanya bukan hanya berdampingan, melainkan benar-benar berbagi panggung, penonton, dan cerita. Di kota kecil ini, seni pertunjukan tumbuh sebagai percakapan, bukan sebagai tembok pemisah.

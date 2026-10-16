@@ -21,9 +21,9 @@ order: 1
 featured: true
 updated: 2026-10-09
 sources:
-  - Indonesian Wikipedia — Sate Srepeh
-  - Detik Jateng — 5 Kuliner Khas Kabupaten Rembang
-  - Visit Jawa Tengah — Wisata Kuliner Kabupaten Rembang
+  - "Indonesian Wikipedia : Sate Srepeh"
+  - "Detik Jateng : 5 Kuliner Khas Kabupaten Rembang"
+  - "Visit Jawa Tengah : Wisata Kuliner Kabupaten Rembang"
 ---
 
 Sate srepeh is the dish most often named when people ask what Rembang is known for. At a glance it looks like ordinary chicken satay, but the moment it reaches the table it sets itself apart: not a thick brown peanut sauce, but a **thin, reddish, coconut-milk sauce**.

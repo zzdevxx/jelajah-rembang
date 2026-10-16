@@ -12,9 +12,9 @@ order: 4
 featured: true
 updated: 2026-10-09
 sources:
-  - Indonesian Wikipedia — Sedekah Laut
-  - Pemerintah Kabupaten Rembang — Tradisi Lomban dan Sedekah Laut
-  - Kemdikbud — Upacara Tradisional Pesisir Jawa
+  - "Indonesian Wikipedia : Sedekah Laut"
+  - "Pemerintah Kabupaten Rembang : Tradisi Lomban dan Sedekah Laut"
+  - "Kemdikbud : Upacara Tradisional Pesisir Jawa"
 ---
 
 For the coastal people of Rembang, the sea is more than a place to earn a living. It is a neighbour owed respect, and that respect is expressed in ceremonies handed down through generations. The largest is **Sedekah Laut**, known in some places as **Lomban**. Its essence is simple: thanks for the sea's yield, and a plea to be kept from harm.

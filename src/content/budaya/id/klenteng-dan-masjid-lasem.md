@@ -14,9 +14,9 @@ order: 2
 featured: true
 updated: 2026-10-09
 sources:
-  - Wikipedia Bahasa Indonesia — Lasem, Rembang
-  - Kemdikbud — Cagar Budaya Klenteng Cu An Kiong Lasem
-  - Dinas Kebudayaan dan Pariwisata Kabupaten Rembang — Jejak Lasem
+  - "Wikipedia Bahasa Indonesia : Lasem, Rembang"
+  - "Kemdikbud : Cagar Budaya Klenteng Cu An Kiong Lasem"
+  - "Dinas Kebudayaan dan Pariwisata Kabupaten Rembang : Jejak Lasem"
 ---
 
 Lasem jarang dibicarakan lewat bangunannya, padahal justru di sana ceritanya paling jelas. Dalam radius beberapa kilometer berdiri klenteng, masjid, dan wihara yang semuanya masih dipakai. Kota ini bukan museum toleransi yang dipamerkan, melainkan tempat orang benar-benar beribadah berdampingan setiap hari.

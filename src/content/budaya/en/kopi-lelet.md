@@ -14,9 +14,9 @@ order: 5
 featured: false
 updated: 2026-10-09
 sources:
-  - Kabupaten Rembang — Kopi Lelet dan Tradisi Ngelelet Lasem
-  - Kompas — Warung Kopi Lelet di Lasem
-  - Dinas Kebudayaan dan Pariwisata Kabupaten Rembang — Warisan Budaya Takbenda
+  - "Kabupaten Rembang : Kopi Lelet dan Tradisi Ngelelet Lasem"
+  - "Kompas : Warung Kopi Lelet di Lasem"
+  - "Dinas Kebudayaan dan Pariwisata Kabupaten Rembang : Warisan Budaya Takbenda"
 ---
 
 In Lasem, coffee is more than a morning drink. It comes with a small habit found in few other places, and that habit is called **ngelelet**. The story is simple but distinctive, and it makes sense only in a town whose whole life turns around batik.

@@ -2,6 +2,8 @@
 translationKey: mangut-manyung
 title: Mangut Manyung
 summary: Ikan manyung asap yang dimasak dalam santan berbumbu, beraroma smoky dengan rasa gurih dan sedikit pedas.
+cover: ../../../assets/kuliner/mangut-manyung.jpg
+coverAlt: "Mangut kepala ikan manyung khas pesisir."
 type: makanan
 origin: Rembang (pesisir)
 ingredients:

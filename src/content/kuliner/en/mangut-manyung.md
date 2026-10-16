@@ -2,6 +2,8 @@
 translationKey: mangut-manyung
 title: Mangut Manyung
 summary: Smoked sea catfish simmered in spiced coconut milk, smoky and savoury with a gentle heat.
+cover: ../../../assets/kuliner/mangut-manyung.jpg
+coverAlt: "Smoked manyung fish head curry."
 type: makanan
 origin: Rembang (coastal)
 ingredients:

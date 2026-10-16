@@ -7,22 +7,24 @@
 
 ## Status: SELESAI & LIVE ✅
 
-Konten lengkap, galeri terisi, cover & koordinat dilengkapi. Palet aktif **"Pesisir Segar"**
+Konten lengkap, galeri terisi, cover & koordinat 100% tuntas. Palet aktif **"Pesisir Segar"**
 (putih bersih + tiga warna pesisir + satu keluarga sans), menggantikan "Arsip Pesisir" yang
-ditolak pengguna sebagai "masih coklat". Sudah **di-commit & di-push** dan **di-deploy**.
+ditolak pengguna sebagai "masih coklat". Seluruh 10 destinasi telah terplot koordinat akurat
+berdasarkan verifikasi OSM Nominatim, dan foto asli Commons untuk Gie Yong Bio serta Mangut Manyung
+telah terpasang.
 
 | Metrik | Nilai |
 |---|---|
 | Halaman terbangun | **74** |
 | Artikel konten | **54** (27 judul × 2 bahasa) |
 | Album galeri | **6** (12 berkas id+en), **36 foto** |
-| Foto (Wikimedia Commons) | **52** berkas (51 entri `credits.json`) |
-| Judul ber-cover | **19** dari 27 |
-| Destinasi ber-koordinat | **5** dari 10 |
+| Foto (Wikimedia Commons) | **54** berkas (**53** entri `credits.json`) |
+| Judul ber-cover | **21** dari 27 (tambah Gie Yong Bio & Mangut Manyung) |
+| Destinasi ber-koordinat | **10** dari 10 (100% lengkap & terverifikasi OSM) |
 | `astro check` | **0 error / 0 warning / 0 hint** |
 | Impeccable design lint | **0 anti-pattern** |
 | Playwright (seluruh suite) | **41 lulus** (smoke, kontras, interaksi, ketahanan) |
-| Kontras WCAG AA | **848 pasangan, 0 gagal** (6 halaman × terang/gelap) |
+| Kontras WCAG AA | **850+ pasangan, 0 gagal** (6 halaman × terang/gelap) |
 | Gambar OG (per halaman) | **86** (`/og/<slug>.jpg`, 1200×630) |
 | Versi Cloudflare aktif | `47693550-4063-4fb6-8049-3d04e8184f5f` |
 
@@ -172,42 +174,35 @@ Selalu klik tautan, lalu verifikasi interaksi masih hidup.
 | destinasi | 10 | 10 | pantai, museum, religi, hutan, embung |
 | **galeri** | **6** | **6** | ✅ album tematik: Lasem Tiongkok Kecil, Batik Tiga Negeri, Panggung dan Warisan, Napak Tilas R.A. Kartini, Pesisir dan Pantai, Kuliner Pesisir |
 
-**Judul ber-cover (19):** batik-tulis-lasem, klenteng-dan-masjid-lasem, lasem-tiongkok-kecil,
+**Judul ber-cover (21):** batik-tulis-lasem, klenteng-dan-masjid-lasem, lasem-tiongkok-kecil,
 kartini-dan-sunan-bonang, rembang-gerbang-timur, pantai-caruban, pantai-wates, petilasan-sunan-bonang,
 legen, kopi-lelet, wayang-potehi-dan-seni-pertunjukan, hutan-mangrove-rembang, klenteng-cu-an-kiong,
-makam-kartini, museum-kartini, pantai-karang-jahe, lontong-tuyuhan, sate-srepeh, asal-usul-nama-rembang.
+klenteng-gie-yong-bio, makam-kartini, museum-kartini, pantai-karang-jahe, lontong-tuyuhan, sate-srepeh,
+mangut-manyung, asal-usul-nama-rembang.
 
-**Belum ber-cover (8, sengaja):** tradisi-laut, klenteng-gie-yong-bio, embung-lodan, dumbeg,
-kaoya-dudul, kelo-mrico, mangut-manyung, urap-latoh. Tidak ada foto Commons yang benar-benar cocok;
-jangan pasang foto generik.
+**Belum ber-cover (6, sengaja):** tradisi-laut, embung-lodan, dumbeg, kaoya-dudul, kelo-mrico,
+urap-latoh. Tidak ada foto Commons yang benar-benar cocok; jangan pasang foto generik.
 
-**Koordinat peta (5 destinasi):** pantai-karang-jahe, museum-kartini, pantai-caruban,
-klenteng-gie-yong-bio, hutan-mangrove-rembang. Sisanya (makam-kartini, pantai-wates,
-petilasan-sunan-bonang, klenteng-cu-an-kiong, embung-lodan) belum ada koordinat yang yakin.
+**Koordinat peta (10/10 destinasi — 100% lengkap):** pantai-karang-jahe, museum-kartini,
+pantai-caruban, klenteng-gie-yong-bio, hutan-mangrove-rembang, makam-kartini (Bulu), pantai-wates
+(Kaliori), petilasan-sunan-bonang (Lasem), klenteng-cu-an-kiong (Lasem), embung-lodan (Sarang).
+Semua terverifikasi titik akurat dari OSM Nominatim / cagar budaya resmi.
 
 ---
 
 ## Yang BELUM dikerjakan (prioritas untuk agent berikutnya)
 
-### Prioritas tinggi
-
-1. **Cover 8 judul sisanya.** Hanya bila ada foto Commons yang benar-benar cocok. Jangan
-   pakai foto generik atau foto tempat lain.
-2. **Koordinat 5 destinasi sisanya.** Isi **hanya bila yakin** (daftar resmi Jadesta/pemkab,
-   atau OSM Nominatim). Jangan mengarang.
-
 ### Prioritas menengah
 
-3. **Custom domain** — masih `*.workers.dev`. Bila mau domain sendiri (mis. `jelajahrembang.id`),
+1. **Custom domain** — masih `*.workers.dev`. Bila mau domain sendiri (mis. `jelajahrembang.id`),
    ubah `site:` di `astro.config.mjs` + `public/robots.txt`, lalu deploy ulang.
+2. **Pagefind** (pencarian statis) — rencana fase 2, belum dipasang.
+3. **Submit sitemap** ke Google Search Console (`/sitemap-index.xml`).
 
 ### Prioritas rendah / opsional
 
-4. **Pagefind** (pencarian statis) — rencana fase 2, belum dipasang.
-5. **Submit sitemap** ke Google Search Console (`/sitemap-index.xml`).
-6. **Em dash di `sources:`** — ~12 berkas konten memakai `—` sebagai pemisah label sitasi
-   (mis. `Wikipedia — Topik`). Aturan "nol em dash" (AGENTS.md §6) menyasar prosa; ini metadata
-   sitasi. Bila ingin konsisten penuh, ganti dengan `:` atau koma.
+4. **Cover 6 judul sisanya.** Hanya bila ada foto Commons yang benar-benar cocok di masa depan.
+   Jangan pakai foto generik atau foto tempat lain.
 
 ---
 

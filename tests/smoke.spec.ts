@@ -52,12 +52,13 @@ test.describe('Konten', () => {
 });
 
 test.describe('Island peta', () => {
-  test('peta memuat Leaflet dan menampilkan marker', async ({ page }) => {
+  test('peta memuat Leaflet dan menampilkan marker seluruh 10 destinasi', async ({ page }) => {
     await page.goto('/peta/');
     // Leaflet menambahkan .leaflet-container saat init
     await expect(page.locator('.leaflet-container')).toBeVisible({ timeout: 15_000 });
-    // Daftar destinasi tetap ada sebagai konten aksesibel
-    await expect(page.locator('a[href*="/destinasi/"]').first()).toBeVisible();
+    // Daftar destinasi tetap ada sebagai konten aksesibel (seluruh 10 destinasi berkoordinat)
+    await expect(page.locator('.rembang-pin')).toHaveCount(10);
+    await expect(page.locator('a[href*="/destinasi/"]').filter({ has: page.locator('.data-figure') })).toHaveCount(10);
   });
 
   test('daftar destinasi terbaca tanpa JavaScript', async ({ browser }) => {

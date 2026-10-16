@@ -6,6 +6,7 @@ title: The Sunan Bonang Complex
 summary: The mosque, the pasujudan, the tomb of Sunan Bonang, the grave of the Champa Princess, and the Bende Becak gong in Bonang, Lasem.
 kind: religi
 kecamatan: Lasem
+coords: [-6.6598, 111.4680]
 tags:
   - religious
   - pilgrimage

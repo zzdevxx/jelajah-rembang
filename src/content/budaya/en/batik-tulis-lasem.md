@@ -14,9 +14,9 @@ order: 1
 featured: true
 updated: 2026-10-09
 sources:
-  - Indonesian Wikipedia — Batik Lasem
-  - UNESCO — Indonesian Batik, Representative List of the Intangible Cultural Heritage of Humanity (2009)
-  - ANRI — Lasem Batik Trade Archives, Memory of the Collective Nation (2024)
+  - "Indonesian Wikipedia : Batik Lasem"
+  - "UNESCO : Indonesian Batik, Representative List of the Intangible Cultural Heritage of Humanity (2009)"
+  - "ANRI : Lasem Batik Trade Archives, Memory of the Collective Nation (2024)"
 ---
 
 Lasem batik is coastal batik, *batik pesisir*. It grew in a port town, far from the palace walls, and so it never obeyed the strict rules that govern the batik of Solo and Yogyakarta. Court batik demands fixed colours and fixed motifs; Lasem batik stays open. Anyone may wear it, from noble families to traders and labourers, from Javanese residents to Chinese ones. That openness is what let Lasem develop a visual language found nowhere else.

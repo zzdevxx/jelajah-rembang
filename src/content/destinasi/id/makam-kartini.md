@@ -5,7 +5,8 @@ summary: Makam R.A. Kartini dan keluarganya di Desa Bulu, Rembang. Menjadi tujua
 cover: ../../../assets/galeri/napak-tilas-kartini/makam-kartini-01.jpg
 coverAlt: "Makam R.A. Kartini di Desa Bulu, Rembang."
 kind: museum
-kecamatan: Rembang
+kecamatan: Bulu
+coords: [-6.8625, 111.4064]
 tags:
   - makam
   - ziarah

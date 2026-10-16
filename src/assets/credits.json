@@ -508,5 +508,25 @@
     "source": "https://commons.wikimedia.org/wiki/File:Warung_Kopi_Lelet_Lasem.jpg",
     "width": 1920,
     "height": 2560
+  },
+  {
+    "local": "destinasi/klenteng-gie-yong-bio.jpg",
+    "title": "Kelenteng Gie Yong Bio di Lasem",
+    "artist": "Candramawa99",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Kelenteng_Gie_Yong_Bio_di_Lasem,_Rembang.jpg",
+    "width": 1920,
+    "height": 1440
+  },
+  {
+    "local": "kuliner/mangut-manyung.jpg",
+    "title": "Mangut kepala manyung",
+    "artist": "Risanprasetyo/Febri Ady Prasetyo",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Mangut_kepala_manyung.jpg",
+    "width": 1920,
+    "height": 1958
   }
 ]

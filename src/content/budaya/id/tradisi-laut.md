@@ -12,9 +12,9 @@ order: 4
 featured: true
 updated: 2026-10-09
 sources:
-  - Wikipedia Bahasa Indonesia — Sedekah Laut
-  - Pemerintah Kabupaten Rembang — Tradisi Lomban dan Sedekah Laut
-  - Kemdikbud — Upacara Tradisional Pesisir Jawa
+  - "Wikipedia Bahasa Indonesia : Sedekah Laut"
+  - "Pemerintah Kabupaten Rembang : Tradisi Lomban dan Sedekah Laut"
+  - "Kemdikbud : Upacara Tradisional Pesisir Jawa"
 ---
 
 Bagi warga pesisir Rembang, laut bukan sekadar tempat mencari nafkah. Ia tetangga yang harus dihormati, dan rasa hormat itu diwujudkan dalam upacara yang diwariskan turun-temurun. Yang paling besar adalah **Sedekah Laut**, yang di beberapa tempat disebut **Lomban**. Intinya sederhana: ucapan syukur atas hasil laut dan permohonan agar dijauhkan dari celaka.

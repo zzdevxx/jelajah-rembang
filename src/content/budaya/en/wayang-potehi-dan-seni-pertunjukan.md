@@ -14,9 +14,9 @@ order: 3
 featured: true
 updated: 2026-10-09
 sources:
-  - Indonesian Wikipedia — Wayang Potehi
-  - Kemdikbud — Wayang Potehi dan Seni Tradisi Lasem
-  - Pemerintah Kabupaten Rembang — Festival Seni Budaya Lasem
+  - "Indonesian Wikipedia : Wayang Potehi"
+  - "Kemdikbud : Wayang Potehi dan Seni Tradisi Lasem"
+  - "Pemerintah Kabupaten Rembang : Festival Seni Budaya Lasem"
 ---
 
 If one thing sets the Lasem stage apart, it is the meeting of Chinese and Javanese traditions. The two do not merely sit side by side; they share a stage, an audience, and a repertoire. In this small town the performing arts grew as a conversation, not a dividing wall.

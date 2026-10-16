@@ -14,9 +14,9 @@ order: 2
 featured: true
 updated: 2026-10-09
 sources:
-  - Indonesian Wikipedia — Lasem, Rembang
-  - Kemdikbud — Cagar Budaya Klenteng Cu An Kiong Lasem
-  - Dinas Kebudayaan dan Pariwisata Kabupaten Rembang — Jejak Lasem
+  - "Indonesian Wikipedia : Lasem, Rembang"
+  - "Kemdikbud : Cagar Budaya Klenteng Cu An Kiong Lasem"
+  - "Dinas Kebudayaan dan Pariwisata Kabupaten Rembang : Jejak Lasem"
 ---
 
 Lasem is rarely described through its buildings, yet that is where its story is clearest. Within a few kilometres stand a Chinese temple, a mosque, and a Buddhist vihara, all still in use. This is not a museum of tolerance put on display; it is a town where people genuinely worship side by side every day.

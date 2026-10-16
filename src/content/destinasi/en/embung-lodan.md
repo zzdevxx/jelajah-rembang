@@ -4,6 +4,7 @@ title: Lodan Reservoir
 summary: A small reservoir in Sarang district, Rembang's easternmost area near the East Java border. Used for irrigation, framed by limestone hills.
 kind: embung
 kecamatan: Sarang
+coords: [-6.7947, 111.6087]
 tags:
   - reservoir
   - hills

@@ -6,6 +6,7 @@ cover: ../../../assets/galeri/lasem-tiongkok-kecil/cu-an-kiong-aula.jpg
 coverAlt: "The central hall of Cu An Kiong Temple, Lasem."
 kind: religi
 kecamatan: Lasem
+coords: [-6.6944, 111.4439]
 tags:
   - temple
   - chinese

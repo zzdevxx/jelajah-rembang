@@ -3,9 +3,10 @@ translationKey: pantai-wates
 cover: ../../../assets/destinasi/pantai-wates.jpg
 coverAlt: "Wates White-Sand Beach in Rembang."
 title: Wates Beach
-summary: A quieter white-sand beach in Pancur district, with clear water and a calmer feel than Rembang's busier coastal spots.
+summary: A quieter white-sand beach in Kaliori district, with clear water and a calmer feel than Rembang's busier coastal spots.
 kind: pantai
-kecamatan: Pancur
+kecamatan: Kaliori
+coords: [-6.6888, 111.2810]
 tags:
   - beach
   - white sand
@@ -18,7 +19,7 @@ sources:
   - "Visit Jawa Tengah : Beaches of Rembang Regency"
 ---
 
-Wates Beach, also known as Wates White-Sand Beach (*Pasir Putih Wates*), is one of the newer coastal destinations opened to visitors in Rembang Regency. It sits in Pancur district, on the western side of the regency. Because it is less developed and less crowded than other beaches, the atmosphere feels calmer and simpler.
+Wates Beach, also known as Wates White-Sand Beach (*Pasir Putih Wates*), is one of the newer coastal destinations opened to visitors in Rembang Regency. It sits in Kaliori district, on the western side of the regency. Because it is less developed and less crowded than other beaches, the atmosphere feels calmer and simpler.
 
 ## A quieter shore
 
