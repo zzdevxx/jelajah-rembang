@@ -136,6 +136,13 @@ const dict = {
     'peta.loading': 'Memuat peta…',
     'peta.legend': 'Keterangan',
 
+    'search.open': 'Cari',
+    'search.title': 'Cari di Jelajah Rembang',
+    'search.placeholder': 'Ketik kata kunci, misalnya batik atau Kartini',
+    'search.hint': 'Pencarian menelusuri judul dan isi artikel dalam bahasa Indonesia.',
+    'search.initial': 'Mulai mengetik untuk mencari di seluruh artikel.',
+    'search.noResults': 'Tidak ada hasil yang cocok. Coba kata kunci lain.',
+
     'footer.sections': 'Jelajahi',
     'footer.about': 'Tentang',
     'footer.aboutText':
@@ -241,6 +248,13 @@ const dict = {
     'peta.list': 'Destination list',
     'peta.loading': 'Loading map…',
     'peta.legend': 'Legend',
+
+    'search.open': 'Search',
+    'search.title': 'Search Jelajah Rembang',
+    'search.placeholder': 'Type a keyword, such as batik or Kartini',
+    'search.hint': 'Search covers article titles and body text in English.',
+    'search.initial': 'Start typing to search every article.',
+    'search.noResults': 'No matching results. Try another keyword.',
 
     'footer.sections': 'Explore',
     'footer.about': 'About',

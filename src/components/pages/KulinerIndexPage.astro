@@ -2,6 +2,7 @@
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import Breadcrumbs from '@/components/nav/Breadcrumbs.astro';
 import KulinerCard from '@/components/cards/KulinerCard.astro';
+import PagefindBody from '@/components/ui/PagefindBody.astro';
 import { getLocalized } from '@/lib/content';
 import { localizePath, t, type Lang } from '@/lib/i18n';
 
@@ -39,27 +40,29 @@ const groups = ['makanan', 'minuman', 'jajanan']
     />
   </div>
 
-  <header class="container-page pb-12 pt-4">
-    <h1 class="m-0 max-w-[18ch] text-balance" data-reveal data-underline>{t('kuliner.title', lang)}</h1>
-    <p class="measure-prose mt-5 text-lg leading-relaxed text-ink-soft" data-reveal style="--i:1">{t('kuliner.lead', lang)}</p>
-  </header>
+  <PagefindBody>
+    <header class="container-page pb-12 pt-4">
+      <h1 class="m-0 max-w-[18ch] text-balance" data-reveal data-underline>{t('kuliner.title', lang)}</h1>
+      <p class="measure-prose mt-5 text-lg leading-relaxed text-ink-soft" data-reveal style="--i:1">{t('kuliner.lead', lang)}</p>
+    </header>
 
-  <div class="container-page flex flex-col gap-16 pb-section">
-    {
-      groups.map((g) => (
-        <section>
-          <h2 class="label-caps m-0 mb-6 border-b border-rule pb-3 text-soga" data-reveal>
-            {TYPE_LABEL[g.type]?.[lang] ?? g.type}
-          </h2>
-          <div class="grid gap-x-6 gap-y-8 sm:grid-cols-2 lg:grid-cols-3">
-            {g.items.map((entry, i) => (
-              <div data-reveal style={`--i:${i}`}>
-                <KulinerCard entry={entry} lang={lang} />
-              </div>
-            ))}
-          </div>
-        </section>
-      ))
-    }
-  </div>
+    <div class="container-page flex flex-col gap-16 pb-section">
+      {
+        groups.map((g) => (
+          <section>
+            <h2 class="label-caps m-0 mb-6 border-b border-rule pb-3 text-soga" data-reveal>
+              {TYPE_LABEL[g.type]?.[lang] ?? g.type}
+            </h2>
+            <div class="grid gap-x-6 gap-y-8 sm:grid-cols-2 lg:grid-cols-3">
+              {g.items.map((entry, i) => (
+                <div data-reveal style={`--i:${i}`}>
+                  <KulinerCard entry={entry} lang={lang} />
+                </div>
+              ))}
+            </div>
+          </section>
+        ))
+      }
+    </div>
+  </PagefindBody>
 </BaseLayout>

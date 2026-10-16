@@ -1,0 +1,196 @@
+---
+/**
+ * Pencarian statis Pagefind.
+ *
+ * Komponen Web native dari @pagefind/component-ui, jadi nol framework dan nol JS
+ * yang kita tulis untuk perilakunya (fokus, Esc, ARIA, pengumuman pembaca layar,
+ * dan Web Worker semuanya ditangani Pagefind). Tugas kita hanya dua:
+ *
+ * 1. Menyambung bahasa. `<PagefindConfig lang>` memilih indeks mana yang dimuat,
+ *    dan Pagefind sudah memisahkan `id-id` dari `en-us` saat build, jadi hasil
+ *    tidak pernah tercampur antar bahasa.
+ * 2. Menjembatani token warna. CSS bawaan Pagefind memakai `--pf-*`; seluruh
+ *    nilainya dipetakan di blok <style> bawah supaya kotak pencarian mengikuti
+ *    palet "Pesisir Segar" dan tetap flat (tanpa bayangan).
+ *
+ * PENTING: `<PagefindConfig>` wajib ada. Dialah yang meng-import
+ * `@pagefind/component-ui` beserta CSS-nya, sehingga seluruh elemen
+ * `<pagefind-*>` benar-benar terdefinisi. Tanpa itu elemen tetap dirender
+ * sebagai tag tak dikenal dan pencarian tidak pernah hidup.
+ */
+import PagefindConfig from 'astro-pagefind/components/PagefindConfig.astro';
+import { t, type Lang } from '@/lib/i18n';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+
+// Pagefind memakai kode bahasa sederhana ("id"/"en"); HTML_LANG kita
+// ("id-ID"/"en-US") tidak diperlukan di sini.
+const pfLang = lang;
+---
+
+<PagefindConfig lang={pfLang} instance="rembang" />
+
+<pagefind-modal reset-on-close instance="rembang">
+  <pagefind-modal-header>{t('search.title', lang)}</pagefind-modal-header>
+  <pagefind-modal-body>
+    <pagefind-input
+      autofocus
+      placeholder={t('search.placeholder', lang)}
+      aria-label={t('search.title', lang)}
+    />
+    <p class="search-hint">{t('search.hint', lang)}</p>
+    <pagefind-summary
+      default-message={t('search.initial', lang)}
+    />
+    <pagefind-results></pagefind-results>
+  </pagefind-modal-body>
+  <pagefind-modal-footer>
+    <pagefind-keyboard-hints></pagefind-keyboard-hints>
+  </pagefind-modal-footer>
+</pagefind-modal>
+
+<noscript>
+  <p class="sr-only">
+    {
+      lang === 'id'
+        ? 'Pencarian memerlukan JavaScript. Seluruh artikel tetap dapat dijelajahi lewat menu.'
+        : 'Search requires JavaScript. Every article remains reachable through the menu.'
+    }
+  </p>
+</noscript>
+
+<style is:global>
+  /* ---------------------------------------------------------------------------
+     Jembatan token: samakan Pagefind dengan "Pesisir Segar".
+
+     SELURUH warna Pagefind lewat token `--pf-*` (nol hard-code), jadi memetakan
+     di sini cukup dan tidak rapuh terhadap perubahan versi. Bayangan dinolkan
+     karena doktrin proyek melarang bayangan pada elemen non-overlay.
+
+     Token disetel pada :root supaya nilainya diwarisi ke SELURUH elemen
+     Pagefind (modal, pemicu, input) tanpa bergantung pada di mana elemen itu
+     dirender. `[data-pf-theme='dark']` bawaan Pagefind tetap lebih spesifik
+     untuk warna gelapnya sendiri, jadi kita ikut memakai penanda yang sama.
+     --------------------------------------------------------------------------- */
+  :root {
+    --pf-font: var(--font-body);
+    --pf-background: var(--paper-raised);
+    --pf-text: var(--ink);
+    --pf-text-secondary: var(--ink-soft);
+    --pf-text-muted: var(--ink-soft);
+    --pf-border: var(--rule);
+    --pf-border-focus: var(--ink-soft);
+    --pf-border-radius: var(--radius-control);
+    --pf-hover: var(--paper-sunken);
+    --pf-mark: var(--merah-lasem);
+    --pf-outline-focus: var(--focus);
+    --pf-modal-backdrop: color-mix(in oklch, var(--scrim) 72%, transparent);
+    --pf-modal-max-width: 34rem;
+    --pf-modal-top: 8dvh;
+
+    /* Flat: bayangan Pagefind dinolkan seluruhnya. */
+    --pf-shadow-sm: none;
+    --pf-shadow-md: none;
+    --pf-shadow-lg: none;
+    --pf-scroll-shadow: none;
+  }
+
+  [data-pf-theme='dark'] {
+    --pf-background: var(--paper-raised);
+    --pf-text: var(--ink);
+    --pf-text-secondary: var(--ink-soft);
+    --pf-text-muted: var(--ink-soft);
+    --pf-border: var(--rule);
+    --pf-border-focus: var(--ink-soft);
+    --pf-hover: var(--paper-sunken);
+    --pf-mark: var(--merah-lasem);
+    --pf-outline-focus: var(--focus);
+    --pf-modal-backdrop: color-mix(in oklch, var(--scrim) 72%, transparent);
+  }
+
+  /* ---------------------------------------------------------------------------
+     Panel modal.
+
+     Aturan `.pf-modal` milik Pagefind memakai spesifisitas tinggi lewat
+     `:is(*, #\#):is(*, #\#):is(*, #\#)`. Ia TIDAK menyetel `color` (sehingga
+     <dialog> jatuh ke warna bawaan peramban, CanvasText = hitam) dan mengunci
+     `border: none` serta `border-radius: 12px` sebagai nilai literal.
+
+     Penyeleksi berulang di bawah mengimbangi spesifisitas tersebut agar panel
+     benar-benar flat (border 1px rule, radius card 4px, tanpa bayangan) dan
+     teksnya mewarisi `--pf-text` di kedua tema.
+     --------------------------------------------------------------------------- */
+  :root:root:root:root dialog.pf-modal {
+    color: var(--pf-text);
+    background: var(--pf-background);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius-card);
+    box-shadow: none;
+  }
+
+  :root:root:root:root pagefind-modal-header {
+    color: var(--pf-text);
+    font-family: var(--font-display);
+    font-weight: 700;
+    letter-spacing: -0.016em;
+  }
+
+  :root:root:root:root .pf-modal-header-content {
+    color: var(--pf-text);
+  }
+
+  :root:root:root:root pagefind-results a {
+    color: var(--pf-text);
+    font-family: var(--font-display);
+    font-weight: 600;
+    letter-spacing: -0.01em;
+  }
+
+  :root:root:root:root pagefind-results a:hover {
+    color: var(--merah-lasem);
+  }
+
+  :root:root:root:root pagefind-results p,
+  :root:root:root:root .pf-result-excerpt {
+    color: var(--pf-text-secondary);
+  }
+
+  /* ---------------------------------------------------------------------------
+     Pemicu di header.
+
+     Samakan dengan tombol saudara di baris kontrol (LangToggle & ThemeToggle):
+     radius-control 2px, border-rule, warna ink-soft, transisi hover.
+     --------------------------------------------------------------------------- */
+  :root:root:root:root .pf-trigger-btn {
+    border: 1px solid var(--rule);
+    border-radius: var(--radius-control);
+    background: var(--paper);
+    color: var(--ink-soft);
+    padding: 0.5rem;
+    height: 2.25rem;
+    min-height: 2.25rem;
+    box-shadow: none;
+    transition: border-color var(--dur-fast), color var(--dur-fast);
+  }
+
+  :root:root:root:root .pf-trigger-btn:hover {
+    border-color: var(--ink);
+    color: var(--ink);
+    background: var(--paper);
+  }
+
+  :root:root:root:root .pf-trigger-icon {
+    filter: none;
+  }
+
+  /* Teks bantuan kita sendiri, bukan milik Pagefind. */
+  .search-hint {
+    margin: 0.5rem 0 0;
+    font-size: 0.75rem;
+    line-height: 1.5;
+    color: var(--pf-text-secondary);
+  }
+</style>

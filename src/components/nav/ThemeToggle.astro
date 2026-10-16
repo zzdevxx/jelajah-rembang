@@ -60,6 +60,10 @@ const { lang } = Astro.props;
   function apply(theme: 'light' | 'dark') {
     current = theme;
     root.dataset.theme = theme;
+    // Pagefind menggantung tema gelapnya pada `data-pf-theme` sendiri, jadi harus
+    // disetel ulang di sini juga: skrip inline di BaseHead tidak berjalan lagi
+    // setelah navigasi client-side.
+    root.dataset.pfTheme = theme;
     document.querySelectorAll<SVGElement>('[data-theme-icon]').forEach((el) => {
       (el as SVGElement & { style: CSSStyleDeclaration }).style.display =
         el.dataset.themeIcon === theme ? '' : 'none';

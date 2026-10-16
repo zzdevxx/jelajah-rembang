@@ -2,6 +2,7 @@
 import { defineConfig } from 'astro/config';
 import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
+import pagefind from 'astro-pagefind';
 import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
@@ -28,6 +29,14 @@ export default defineConfig({
       i18n: {
         defaultLocale: 'id',
         locales: { id: 'id-ID', en: 'en-US' },
+      },
+    }),
+    // Indeks pencarian statis. Hanya halaman bertanda `data-pagefind-body` yang
+    // masuk indeks, sehingga halaman kredit (150+ entri atribusi) dan 404 terlewat
+    // dengan sendirinya. Bahasa dideteksi dari atribut <html lang>.
+    pagefind({
+      indexConfig: {
+        excludeSelectors: ['nav', 'aside', '[data-pagefind-ignore]'],
       },
     }),
   ],

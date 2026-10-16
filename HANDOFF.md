@@ -21,9 +21,10 @@ telah terpasang.
 | Foto (Wikimedia Commons) | **54** berkas (**53** entri `credits.json`) |
 | Judul ber-cover | **21** dari 27 (tambah Gie Yong Bio & Mangut Manyung) |
 | Destinasi ber-koordinat | **10** dari 10 (100% lengkap & terverifikasi OSM) |
+| Pencarian statis (Pagefind) | **Aktif & bilingual** (35 id-id / 35 en-us), modal keyboard-accessible |
 | `astro check` | **0 error / 0 warning / 0 hint** |
 | Impeccable design lint | **0 anti-pattern** |
-| Playwright (seluruh suite) | **41 lulus** (smoke, kontras, interaksi, ketahanan) |
+| Playwright (seluruh suite) | **43 lulus** (smoke, kontras, interaksi, ketahanan, search) |
 | Kontras WCAG AA | **850+ pasangan, 0 gagal** (6 halaman × terang/gelap) |
 | Gambar OG (per halaman) | **86** (`/og/<slug>.jpg`, 1200×630) |
 | Versi Cloudflare aktif | `47693550-4063-4fb6-8049-3d04e8184f5f` |
@@ -190,18 +191,37 @@ Semua terverifikasi titik akurat dari OSM Nominatim / cagar budaya resmi.
 
 ---
 
+## Pencarian Statis: Pagefind (SELESAI 16 Okt 2026)
+
+Pencarian statis nol-server berbasis Pagefind 1.5 + `@pagefind/component-ui` (Web Components native).
+Fitur utama:
+- **Bilingual terpisah:** indeks terbagi otomatis menjadi `id-id` (35 halaman) dan `en-us` (35 halaman)
+  berdasarkan atribut `<html lang>`. Pencarian di `/` hanya mengembalikan hasil Indonesia, dan pencarian
+  di `/en/` hanya mengembalikan hasil Inggris.
+- **Batas konten presisi:** konten diindeks lewat `data-pagefind-body` pada selubung isi (`Prose.astro`
+  dan `PagefindBody.astro`). Halaman `/kredit/` (150+ entri atribusi) dan `404` otomatis dilewati.
+- **Desain flat "Pesisir Segar":** seluruh token `--pf-*` dipetakan ke token desain proyek di
+  `src/components/search/SearchDialog.astro`; bayangan dinolkan (`box-shadow: none`), radius 4px / 2px.
+- **Jembatan tema gelap:** Pagefind menggantung tema pada `[data-pf-theme='dark']`. Disinkronkan di
+  dua titik: `is:inline` di `BaseHead.astro` (cegah FOUC) dan `ThemeToggle.astro` (saat toggle).
+- **Pembersihan kebocoran View Transitions:** Pagefind `InstanceManager` menahan elemen modal lama
+  yang terputus dari DOM (`isConnected === false`). Dibersihkan secara idempoten di `SearchTrigger.astro`
+  saat `astro:page-load` agar klik selalu membuka modal aktif.
+- **Uji otomatis:** `tests/search.spec.ts` (6 pengujian: pemicu, kueri ID, kueri EN, Esc focus restore,
+  ketahanan navigasi client-side, fallback tanpa JS).
+
+---
+
 ## Yang BELUM dikerjakan (prioritas untuk agent berikutnya)
 
 ### Prioritas menengah
 
-1. **Custom domain** — masih `*.workers.dev`. Bila mau domain sendiri (mis. `jelajahrembang.id`),
-   ubah `site:` di `astro.config.mjs` + `public/robots.txt`, lalu deploy ulang.
-2. **Pagefind** (pencarian statis) — rencana fase 2, belum dipasang.
-3. **Submit sitemap** ke Google Search Console (`/sitemap-index.xml`).
+1. **Submit sitemap** ke Google Search Console (`/sitemap-index.xml`).
+2. **Custom domain** — masih `*.workers.dev` (ditunda/skip oleh pengguna).
 
 ### Prioritas rendah / opsional
 
-4. **Cover 6 judul sisanya.** Hanya bila ada foto Commons yang benar-benar cocok di masa depan.
+3. **Cover 6 judul sisanya.** Hanya bila ada foto Commons yang benar-benar cocok di masa depan.
    Jangan pakai foto generik atau foto tempat lain.
 
 ---

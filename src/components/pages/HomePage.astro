@@ -7,6 +7,7 @@ import SectionHeading from '@/components/ui/SectionHeading.astro';
 import StatBlock from '@/components/ui/StatBlock.astro';
 import KulinerCard from '@/components/cards/KulinerCard.astro';
 import DestinasiCard from '@/components/cards/DestinasiCard.astro';
+import PagefindBody from '@/components/ui/PagefindBody.astro';
 
 interface Props {
   lang: Lang;
@@ -78,8 +79,9 @@ const KECAMATAN = [
   description={t('site.description', lang)}
   collection="beranda"
 >
-  <!-- ============ HERO ============ -->
-  <section class="relative overflow-hidden border-b border-rule">
+  <PagefindBody>
+    <!-- ============ HERO ============ -->
+    <section class="relative overflow-hidden border-b border-rule">
     <!-- Kisi canting: motif identitas, bukan latar penuh (R-07) -->
     <div class="canting-rule absolute inset-x-0 top-0" aria-hidden="true"></div>
 
@@ -269,5 +271,6 @@ const KECAMATAN = [
         </svg>
       </div>
     </div>
-  </section>
+    </section>
+  </PagefindBody>
 </BaseLayout>

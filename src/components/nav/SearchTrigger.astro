@@ -1,0 +1,74 @@
+---
+/**
+ * Tombol pemicu pencarian di header.
+ *
+ * `<pagefind-modal-trigger>` berasal dari @pagefind/component-ui dan menangani
+ * pembukaan modal, pintasan keyboard, serta pemulihan fokus setelah tutup.
+ * Kita hanya menyediakan label bahasa lewat atribut `placeholder`.
+ */
+import { t, type Lang } from '@/lib/i18n';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+---
+
+<pagefind-modal-trigger
+  compact
+  hide-shortcut
+  instance="rembang"
+  placeholder={t('search.open', lang)}
+  aria-label={t('search.title', lang)}
+  title={t('search.open', lang)}
+></pagefind-modal-trigger>
+
+<script>
+  // View Transitions menyalin elemen DOM saat navigasi client-side, tetapi
+  // Pagefind InstanceManager menyimpan referensi modal lama yang sudah terlepas
+  // dari DOM di `instance.componentsByType['utility']`. Akibatnya `modals[0]`
+  // menunjuk ke modal mati, bukan modal hidup di halaman baru.
+  //
+  // Fungsi ini membersihkan elemen tak-terhubung (isConnected === false) dari
+  // instance, lalu memasang listener klik langsung yang membuka modal aktif.
+  function rebindTrigger() {
+    const trigger = document.querySelector<
+      HTMLElement & {
+        openModal?: () => void;
+        instance?: {
+          componentsByType?: Record<string, HTMLElement[]>;
+          components?: HTMLElement[];
+        };
+      }
+    >('pagefind-modal-trigger');
+    if (!trigger) return;
+
+    // Bersihkan komponen mati dari registry Pagefind
+    if (trigger.instance?.componentsByType) {
+      for (const k of Object.keys(trigger.instance.componentsByType)) {
+        trigger.instance.componentsByType[k] = (trigger.instance.componentsByType[k] || []).filter(
+          (c) => c && c.isConnected,
+        );
+      }
+      if (Array.isArray(trigger.instance.components)) {
+        trigger.instance.components = trigger.instance.components.filter((c) => c && c.isConnected);
+      }
+    }
+
+    if (trigger.dataset.navBound) return;
+    trigger.dataset.navBound = 'true';
+
+    trigger.addEventListener('click', (e) => {
+      const modal = document.querySelector<HTMLElement & { open?: () => void; isOpen?: boolean }>(
+        'pagefind-modal[instance="rembang"]',
+      );
+      if (modal && !modal.isOpen && typeof modal.open === 'function') {
+        e.preventDefault();
+        modal.open();
+      }
+    });
+  }
+
+  rebindTrigger();
+  document.addEventListener('astro:page-load', rebindTrigger);
+</script>

@@ -2,6 +2,7 @@
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import Breadcrumbs from '@/components/nav/Breadcrumbs.astro';
 import MapIsland from '@/components/peta/MapIsland.astro';
+import PagefindBody from '@/components/ui/PagefindBody.astro';
 import { getLocalized, stripLang } from '@/lib/content';
 import { localizePath, t, type Lang } from '@/lib/i18n';
 
@@ -38,12 +39,13 @@ const points = entries
     />
   </div>
 
-  <header class="container-page pb-10 pt-4">
-    <h1 class="m-0 max-w-[18ch] text-balance">{t('peta.title', lang)}</h1>
-    <p class="measure-prose mt-5 text-lg leading-relaxed text-ink-soft">{t('peta.lead', lang)}</p>
-  </header>
+  <PagefindBody>
+    <header class="container-page pb-10 pt-4">
+      <h1 class="m-0 max-w-[18ch] text-balance">{t('peta.title', lang)}</h1>
+      <p class="measure-prose mt-5 text-lg leading-relaxed text-ink-soft">{t('peta.lead', lang)}</p>
+    </header>
 
-  <div class="container-page pb-section">
+    <div class="container-page pb-section">
     {
       points.length > 0 ? (
         <MapIsland points={points} lang={lang} />
@@ -63,5 +65,6 @@ const points = entries
         </div>
       )
     }
-  </div>
+    </div>
+  </PagefindBody>
 </BaseLayout>

@@ -2,6 +2,7 @@
 import { Image } from 'astro:assets';
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import Breadcrumbs from '@/components/nav/Breadcrumbs.astro';
+import PagefindBody from '@/components/ui/PagefindBody.astro';
 import { getLocalized } from '@/lib/content';
 import { localizePath, t, type Lang } from '@/lib/i18n';
 
@@ -28,12 +29,13 @@ const albums = await getLocalized('galeri', lang);
     />
   </div>
 
-  <header class="container-page pb-12 pt-4">
-    <h1 class="m-0 max-w-[18ch] text-balance" data-reveal data-underline>{t('galeri.title', lang)}</h1>
-    <p class="measure-prose mt-5 text-lg leading-relaxed text-ink-soft" data-reveal style="--i:1">{t('galeri.lead', lang)}</p>
-  </header>
+  <PagefindBody>
+    <header class="container-page pb-12 pt-4">
+      <h1 class="m-0 max-w-[18ch] text-balance" data-reveal data-underline>{t('galeri.title', lang)}</h1>
+      <p class="measure-prose mt-5 text-lg leading-relaxed text-ink-soft" data-reveal style="--i:1">{t('galeri.lead', lang)}</p>
+    </header>
 
-  <div class="container-page pb-section">
+    <div class="container-page pb-section">
     {
       albums.length === 0 ? (
         <div class="rounded-card border border-rule bg-paper-sunken p-10 text-center">
@@ -85,7 +87,8 @@ const albums = await getLocalized('galeri', lang);
         </div>
       )
     }
-  </div>
+    </div>
+  </PagefindBody>
 </BaseLayout>
 
 <!-- Lightbox: <dialog> native memberi focus-trap, Esc, dan top-layer gratis -->

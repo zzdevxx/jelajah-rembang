@@ -2,6 +2,7 @@
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import Breadcrumbs from '@/components/nav/Breadcrumbs.astro';
 import BudayaCard from '@/components/cards/BudayaCard.astro';
+import PagefindBody from '@/components/ui/PagefindBody.astro';
 import { getLocalized } from '@/lib/content';
 import { localizePath, t, type Lang } from '@/lib/i18n';
 
@@ -30,20 +31,22 @@ const INKS = ['merah', 'indigo', 'soga'] as const;
     />
   </div>
 
-  <header class="container-page pb-12 pt-4">
-    <h1 class="m-0 max-w-[18ch] text-balance" data-reveal data-underline>{t('budaya.title', lang)}</h1>
-    <p class="measure-prose mt-5 text-lg leading-relaxed text-ink-soft" data-reveal style="--i:1">{t('budaya.lead', lang)}</p>
-  </header>
+  <PagefindBody>
+    <header class="container-page pb-12 pt-4">
+      <h1 class="m-0 max-w-[18ch] text-balance" data-reveal data-underline>{t('budaya.title', lang)}</h1>
+      <p class="measure-prose mt-5 text-lg leading-relaxed text-ink-soft" data-reveal style="--i:1">{t('budaya.lead', lang)}</p>
+    </header>
 
-  <div class="container-page pb-section">
-    <div class="grid gap-x-10 gap-y-12 md:grid-cols-2">
-      {
-        entries.map((entry, i) => (
-          <div data-reveal style={`--i:${i % 2}`}>
-            <BudayaCard entry={entry} lang={lang} ink={INKS[i % INKS.length]} />
-          </div>
-        ))
-      }
+    <div class="container-page pb-section">
+      <div class="grid gap-x-10 gap-y-12 md:grid-cols-2">
+        {
+          entries.map((entry, i) => (
+            <div data-reveal style={`--i:${i % 2}`}>
+              <BudayaCard entry={entry} lang={lang} ink={INKS[i % INKS.length]} />
+            </div>
+          ))
+        }
+      </div>
     </div>
-  </div>
+  </PagefindBody>
 </BaseLayout>

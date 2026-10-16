@@ -2,6 +2,7 @@
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import Breadcrumbs from '@/components/nav/Breadcrumbs.astro';
 import SejarahCard from '@/components/cards/SejarahCard.astro';
+import PagefindBody from '@/components/ui/PagefindBody.astro';
 import { getLocalized } from '@/lib/content';
 import { localizePath, t, type Lang } from '@/lib/i18n';
 
@@ -28,20 +29,22 @@ const entries = await getLocalized('sejarah', lang);
     />
   </div>
 
-  <header class="container-page pb-12 pt-4">
-    <h1 class="m-0 max-w-[18ch] text-balance" data-reveal data-underline>{t('sejarah.title', lang)}</h1>
-    <p class="measure-prose mt-5 text-lg leading-relaxed text-ink-soft" data-reveal style="--i:1">{t('sejarah.lead', lang)}</p>
-  </header>
+  <PagefindBody>
+    <header class="container-page pb-12 pt-4">
+      <h1 class="m-0 max-w-[18ch] text-balance" data-reveal data-underline>{t('sejarah.title', lang)}</h1>
+      <p class="measure-prose mt-5 text-lg leading-relaxed text-ink-soft" data-reveal style="--i:1">{t('sejarah.lead', lang)}</p>
+    </header>
 
-  <div class="container-page pb-section">
-    <ol class="flex flex-col gap-14">
-      {
-        entries.map((entry, i) => (
-          <li class="list-none" data-reveal style={`--i:${i}`}>
-            <SejarahCard entry={entry} lang={lang} />
-          </li>
-        ))
-      }
-    </ol>
-  </div>
+    <div class="container-page pb-section">
+      <ol class="flex flex-col gap-14">
+        {
+          entries.map((entry, i) => (
+            <li class="list-none" data-reveal style={`--i:${i}`}>
+              <SejarahCard entry={entry} lang={lang} />
+            </li>
+          ))
+        }
+      </ol>
+    </div>
+  </PagefindBody>
 </BaseLayout>

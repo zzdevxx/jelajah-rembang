@@ -1,0 +1,17 @@
+---
+/**
+ * Batas konten untuk indeks pencarian Pagefind.
+ *
+ * Pagefind mengindeks HANYA di dalam elemen ber-`data-pagefind-body`. Bila ada
+ * minimal satu halaman bertanda body, seluruh halaman tanpa tanda itu terlewat
+ * dengan sendirinya — itulah cara /kredit dan /404 dikecualikan (tanpa atribut
+ * apa pun di sana).
+ *
+ * Komponen ini ada supaya atribut tidak diulang di 7 halaman indeks. Halaman
+ * detail tidak memakainya karena sudah memakai `Prose` (lihat prop pagefindBody).
+ */
+---
+
+<div data-pagefind-body>
+  <slot />
+</div>

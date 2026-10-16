@@ -13,3 +13,16 @@
 # Font
 /fonts/*
   Cache-Control: public, max-age=31536000, immutable
+
+# Indeks Pagefind
+# Berkas ber-hash di dalam subfolder aman di-cache permanen. Berkas tingkat atas
+# (pagefind.js, pagefind-entry.json) TIDAK ber-hash di namanya, jadi umurnya
+# pendek supaya indeks baru tidak tertahan di cache pengunjung.
+/pagefind/*
+  Cache-Control: public, max-age=3600
+
+/pagefind/fragment/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/pagefind/index/*
+  Cache-Control: public, max-age=31536000, immutable

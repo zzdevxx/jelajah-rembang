@@ -1,8 +1,16 @@
 ---
+/**
+ * Prosa artikel. Dipakai seluruh halaman detail.
+ *
+ * `pagefindBody` menandai elemen ini sebagai batas indeks pencarian. Dinyalakan
+ * oleh halaman detail supaya isi artikel masuk indeks tanpa ikut menyeret
+ * breadcrumb, daftar sumber, dan tautan "kembali" yang bukan konten.
+ */
 interface Props {
   size?: 'default' | 'lead';
+  pagefindBody?: boolean;
 }
-const { size = 'default' } = Astro.props;
+const { size = 'default', pagefindBody = false } = Astro.props;
 ---
 
 <div
@@ -21,6 +29,7 @@ const { size = 'default' } = Astro.props;
     '[&_hr]:my-10 [&_hr]:border-rule',
     '[&_code]:rounded [&_code]:bg-paper-sunken [&_code]:px-1.5 [&_code]:py-0.5',
   ]}
+  data-pagefind-body={pagefindBody ? '' : undefined}
 >
   <slot />
 </div>

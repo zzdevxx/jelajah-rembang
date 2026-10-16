@@ -101,12 +101,17 @@ const selfHref = `${site}${Astro.url.pathname}`;
   (() => {
     // Kelas `.js` mengaktifkan animasi reveal. Tanpa JS, konten tampil apa adanya.
     document.documentElement.classList.add('js');
+    let theme;
     try {
       const stored = localStorage.getItem('rembang-theme');
       const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      document.documentElement.dataset.theme = stored ?? (prefersDark ? 'dark' : 'light');
+      theme = stored ?? (prefersDark ? 'dark' : 'light');
     } catch {
-      document.documentElement.dataset.theme = 'light';
+      theme = 'light';
     }
+    document.documentElement.dataset.theme = theme;
+    // Pagefind menggantung tema gelapnya pada `data-pf-theme`, bukan `prefers-color-scheme`
+    // dan bukan `data-theme` kita. Tanpa baris ini kotak pencarian selalu terang.
+    document.documentElement.dataset.pfTheme = theme;
   })();
 </script>

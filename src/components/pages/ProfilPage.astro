@@ -4,6 +4,7 @@ import Breadcrumbs from '@/components/nav/Breadcrumbs.astro';
 import SectionHeading from '@/components/ui/SectionHeading.astro';
 import StatBlock from '@/components/ui/StatBlock.astro';
 import BatikMotif from '@/components/ui/BatikMotif.astro';
+import PagefindBody from '@/components/ui/PagefindBody.astro';
 import { localizePath, t, type Lang } from '@/lib/i18n';
 
 interface Props {
@@ -76,10 +77,11 @@ const ECONOMY = isId
     />
   </div>
 
-  <header class="container-page pb-12 pt-4">
-    <h1 class="m-0 max-w-[18ch] text-balance">{t('profil.title', lang)}</h1>
-    <p class="measure-prose mt-5 text-lg leading-relaxed text-ink-soft">{t('profil.lead', lang)}</p>
-  </header>
+  <PagefindBody>
+    <header class="container-page pb-12 pt-4">
+      <h1 class="m-0 max-w-[18ch] text-balance">{t('profil.title', lang)}</h1>
+      <p class="measure-prose mt-5 text-lg leading-relaxed text-ink-soft">{t('profil.lead', lang)}</p>
+    </header>
 
   <!-- Geografi -->
   <section class="border-y border-rule bg-paper-sunken">
@@ -182,4 +184,5 @@ const ECONOMY = isId
       </p>
     </div>
   </section>
+  </PagefindBody>
 </BaseLayout>

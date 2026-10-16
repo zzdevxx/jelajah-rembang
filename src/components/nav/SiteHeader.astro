@@ -1,6 +1,7 @@
 ---
 import LangToggle from './LangToggle.astro';
 import ThemeToggle from './ThemeToggle.astro';
+import SearchTrigger from './SearchTrigger.astro';
 import { localizePath, stripLocalePrefix, t, type Lang } from '@/lib/i18n';
 
 interface Props {
@@ -25,8 +26,9 @@ const current = neutral === '/' ? '/' : neutral.replace(/\/$/, '');
 
 <header class="sticky top-0 z-40 border-b border-rule bg-paper">
   <div class="container-page flex h-16 items-center justify-between gap-4">
-    <!-- Identitas -->
-    <a href={localizePath('/', lang)} class="group flex items-center gap-2.5" aria-label={t('site.name', lang)}>
+    <!-- Identitas. `min-w-0` penting: tanpa itu kolom teks tidak boleh menyusut
+         dan baris kontrol meluber di lebar 360px kini ada tombol cari keempat. -->
+    <a href={localizePath('/', lang)} class="group flex min-w-0 items-center gap-2.5" aria-label={t('site.name', lang)}>
       <svg
         width="30"
         height="30"
@@ -76,6 +78,7 @@ const current = neutral === '/' ? '/' : neutral.replace(/\/$/, '');
 
     <!-- Kontrol -->
     <div class="flex items-center gap-2">
+      <SearchTrigger lang={lang} />
       <LangToggle lang={lang} altHref={altHref} />
       <ThemeToggle lang={lang} />
       <button

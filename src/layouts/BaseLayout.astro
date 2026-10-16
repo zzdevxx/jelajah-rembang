@@ -3,6 +3,7 @@ import BaseHead from '@/components/seo/BaseHead.astro';
 import SiteHeader from '@/components/nav/SiteHeader.astro';
 import SiteFooter from '@/components/footer/SiteFooter.astro';
 import SkipLink from '@/components/nav/SkipLink.astro';
+import SearchDialog from '@/components/search/SearchDialog.astro';
 import { ClientRouter } from 'astro:transitions';
 import '@/styles/global.css';
 import { HTML_LANG, t, type Lang } from '@/lib/i18n';
@@ -39,10 +40,15 @@ const metaDescription = description ?? t('site.description', lang);
   <body class="min-h-screen flex flex-col bg-paper text-ink antialiased">
     <SkipLink lang={lang} />
     <SiteHeader lang={lang} />
-    <main id="main" class="flex-1" transition:animate="fade">
+    <!-- `data-pagefind-ignore` menutup seluruh cangkang; hanya elemen
+         ber-`data-pagefind-body` di dalamnya yang masuk indeks pencarian. -->
+    <main id="main" class="flex-1" transition:animate="fade" data-pagefind-ignore>
       <slot />
     </main>
     <SiteFooter lang={lang} />
+    <!-- Modal pencarian di luar <main>: <main> memasang transition:animate="fade",
+         jadi apa pun di luar itu bertahan utuh saat navigasi client-side. -->
+    <SearchDialog lang={lang} />
     <script>
       // Pengendali reveal: elemen [data-reveal] muncul saat masuk viewport.
       // `astro:page-load` menyala SEKALI saat muat awal dan sekali tiap perpindahan
