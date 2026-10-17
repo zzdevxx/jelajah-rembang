@@ -15,15 +15,15 @@ export { ogSlugFor } from './og-slug';
 export const OG_WIDTH = 1200;
 export const OG_HEIGHT = 630;
 
-/** Warna dari DESIGN.md "Bahari Karang" (heks, sinkron 1:1). */
+/** Warna dari DESIGN.md "Wastra Pusaka" (heks, sinkron 1:1). */
 const C = {
-  paper: '#f8fafc',
-  sunken: '#f1f5f9',
-  ink: '#0f172a',
-  soft: '#475569',
-  accent: '#c81e2b',
-  teal: '#0a6b79',
-  rule: '#e2e8f0',
+  paper: '#faf8f5',
+  sunken: '#f1efeb',
+  ink: '#141416',
+  soft: '#56555c',
+  accent: '#a31828',
+  teal: '#0e585e',
+  rule: '#e4e2da',
 };
 
 // Saat prerender, proses berjalan dari root proyek; bundel berada di dist/,

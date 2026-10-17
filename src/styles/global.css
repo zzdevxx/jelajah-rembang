@@ -5,32 +5,35 @@
 @import '@fontsource-variable/martian-mono';
 
 /* ==========================================================================
-   Bahari Karang — token sistem desain (revisi "Oceanic Slate & Ruby Lasem", 16 Okt 2026)
+   Wastra Pusaka — token sistem desain (revisi "Imperial Lasem & Velvet Obsidian", 17 Okt 2026)
    Sumber kebenaran: DESIGN.md. Ubah di sana lebih dulu, lalu di sini (byte-sinkron).
-   SEGAR & BERSIH: kertas putih garam laut bercahaya (#F8FAFC), arang samudera dalam (#0F172A),
-   tiga aksen bahari kultural (merah delima Lasem pekat #C81E2B, biru bahari #0284C7,
-   zamrud ombak #0A6B79). TANPA coklat/sepia/krem dekil, TANPA emas kusam.
+   ELEGAN & BERWIBAWA: kanvas alabaster sutra hangat (#FAF8F5), arang beludru dalam (#141416),
+   tiga aksen kultural pusaka (merah delima Lasem keraton #A31828, biru wedel pesisir #1B365D,
+   zamrud soga #0E585E). Dark mode: obsidian beludru pekat (#0A0B0E), kartu obsidian (#14161C),
+   teks perak titanium (#F4F4F6), aksen rubi berkilau (#F43F5E), tombol rubi beludru (#BE123C).
    Satu keluarga sans (Hanken Grotesk) untuk display & body; Martian Mono untuk data.
    Flat: tanpa gradien, tanpa glass, tanpa soft shadow. Semua pasangan lolos AA.
    ========================================================================== */
 
 :root {
-  /* --- Tiga warna aksen pesisir (segar, berwibawa, saturasi tinggi) --- */
-  --merah-lasem: #c81e2b; /* Merah delima Lasem pekat */
-  --merah-lasem-deep: #991b1b;
-  --indigo-lasem: #0369a1; /* Biru pesisir bahari cerah (kontras 5.93:1) */
-  --soga: #0a6b79; /* Zamrud ombak / sea-glass teal */
+  /* --- Tiga warna aksen pesisir (elegan, keraton, saturasi berwibawa) --- */
+  --merah-lasem: #a31828; /* Merah delima Lasem keraton (kontras 7.29:1) */
+  --merah-lasem-deep: #83101e;
+  --merah-lasem-fill: #a31828; /* Merah tombol isi */
+  --merah-lasem-fill-hover: #83101e;
+  --indigo-lasem: #1b365d; /* Nila wedel klasik pesisir (kontras 11.44:1) */
+  --soga: #0e585e; /* Zamrud soga pesisir (kontras 7.69:1) */
 
-  /* --- Permukaan & teks (terang, putih garam laut sejuk & bercahaya) --- */
-  --paper: #f8fafc;
+  /* --- Permukaan & teks (terang: alabaster sutra hangat & bercahaya) --- */
+  --paper: #faf8f5;
   --paper-raised: #ffffff;
-  --paper-sunken: #f1f5f9;
-  --ink: #0f172a; /* arang samudera dalam, sangat tajam & berwibawa */
-  --ink-soft: #475569; /* slate pesisir sejuk */
-  --rule: #e2e8f0;
-  --focus: #c81e2b;
+  --paper-sunken: #f1efeb;
+  --ink: #141416; /* arang beludru hitam dalam, sangat tajam & berwibawa (17.36:1) */
+  --ink-soft: #56555c; /* arang kabut lembut (6.95:1) */
+  --rule: #e4e2da;
+  --focus: #a31828;
   /* Veil overlay (scrim): SELALU gelap, sengaja tidak dibalik oleh tema. */
-  --scrim: #0f172a;
+  --scrim: #141416;
 
   /* --- Skala & irama --- */
   --radius-control: 2px;
@@ -55,20 +58,22 @@
 }
 
 [data-theme='dark'] {
-  --merah-lasem: #f87171;
-  --merah-lasem-deep: #fca5a5;
+  --merah-lasem: #f43f5e; /* Permata rubi bercahaya untuk teks/aksen/garis (kontras 5.36:1) */
+  --merah-lasem-deep: #fb7185;
+  --merah-lasem-fill: #be123c; /* Merah rubi beludru kaya untuk tombol CTA (putih on merah 6.29:1) */
+  --merah-lasem-fill-hover: #9f1239;
 
-  --indigo-lasem: #38bdf8;
-  --soga: #2dd4bf;
+  --indigo-lasem: #60a5fa; /* Safir laut ningrat bercahaya (kontras 7.74:1) */
+  --soga: #2dd4bf; /* Giok pesisir bercahaya (kontras 10.57:1) */
 
-  --paper: #0b1120; /* samudera malam dalam */
-  --paper-raised: #131c31; /* kartu malam bertekstur tenang */
-  --paper-sunken: #070a12;
-  --ink: #f1f5f9; /* putih es sejuk */
-  --ink-soft: #94a3b8;
-  --rule: #1e293b;
-  --focus: #f87171;
-  --scrim: #070a12;
+  --paper: #0a0b0e; /* Obsidian beludru pekat berkelas (bukan navy kusam) */
+  --paper-raised: #14161c; /* Kartu obsidian bertekstur tenang */
+  --paper-sunken: #060709; /* Seksi palung laut dalam */
+  --ink: #f4f4f6; /* Perak titanium bercahaya (17.92:1) */
+  --ink-soft: #90919c; /* Platinum sejuk halus (6.29:1) */
+  --rule: #20232c;
+  --focus: #f43f5e;
+  --scrim: #060709;
 
   color-scheme: dark;
 }
@@ -337,7 +342,23 @@
 }
 
 .js [data-reveal='clip'].is-visible > [data-reveal-clip-inner] {
-  clip-path: inset(0 0 0 0);
+  clip-path: none;
+  padding-bottom: 0.12em;
+}
+
+/* Tombol aksi utama (CTA): teks selalu putih bersih berkilau di atas merah delima/rubi kaya */
+a.bg-merah,
+button.bg-merah {
+  color: #ffffff;
+}
+[data-theme='dark'] a.bg-merah,
+[data-theme='dark'] button.bg-merah {
+  background-color: var(--merah-lasem-fill);
+  color: #ffffff;
+}
+[data-theme='dark'] a.bg-merah:hover,
+[data-theme='dark'] button.bg-merah:hover {
+  background-color: var(--merah-lasem-fill-hover);
 }
 
 .js [data-reveal='scale'] {

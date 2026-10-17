@@ -92,10 +92,10 @@ const KECAMATAN = [
           {isId ? 'Jawa Tengah · Pantura' : 'Central Java · North Coast'}
         </p>
         <h1
-          class="mt-5 font-display text-[clamp(3rem,9vw,6.5rem)] font-bold leading-[0.94] tracking-[-0.035em] text-ink"
+          class="mt-5 font-display text-[clamp(3rem,9vw,6.5rem)] font-bold leading-[1.05] tracking-[-0.035em] text-ink"
         >
           <span class="block" data-reveal="clip" style="--i:0">
-            <span data-reveal-clip-inner>{t('home.heroTitle', lang)}</span>
+            <span data-reveal-clip-inner class="inline-block pb-1">{t('home.heroTitle', lang)}</span>
           </span>
         </h1>
         <p
@@ -108,7 +108,7 @@ const KECAMATAN = [
         <div class="mt-9 flex flex-wrap gap-3" data-reveal style="--i:2">
           <a
             href={localizePath('/sejarah', lang)}
-            class="group inline-flex items-center gap-2 rounded-control bg-merah px-5 py-3 text-sm font-semibold text-paper-raised transition-colors duration-150 hover:bg-merah-deep"
+            class="group inline-flex items-center gap-2 rounded-control bg-merah px-5 py-3 text-sm font-semibold text-white transition-colors duration-150 hover:bg-merah-deep"
           >
             {t('home.exploreSejarah', lang)}
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="transition-transform duration-300 group-hover:translate-x-1 motion-reduce:transition-none motion-reduce:group-hover:translate-x-0">
@@ -251,7 +251,7 @@ const KECAMATAN = [
         <p class="mt-4 max-w-lg text-base leading-relaxed text-ink-soft">{t('home.mapLead', lang)}</p>
         <a
           href={localizePath('/peta', lang)}
-          class="mt-7 inline-flex items-center gap-2 rounded-control bg-merah px-5 py-3 text-sm font-semibold text-paper-raised transition-colors duration-150 hover:bg-merah-deep"
+          class="mt-7 inline-flex items-center gap-2 rounded-control bg-merah px-5 py-3 text-sm font-semibold text-white transition-colors duration-150 hover:bg-merah-deep"
         >
           {t('nav.peta', lang)}
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">

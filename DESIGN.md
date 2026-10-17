@@ -1,35 +1,36 @@
 ---
 schemaVersion: 2
-name: Bahari Karang
-description: Sistem desain untuk situs profil Kabupaten Rembang — oceanic slate & ruby Lasem: kanvas putih garam laut sejuk (#F8FAFC), arang samudera dalam (#0F172A), tiga warna aksen bahari kultural (merah delima Lasem #C81E2B, biru bahari #0284C7, zamrud ombak #0A6B79), satu keluarga sans.
+name: Wastra Pusaka
+description: Sistem desain untuk situs profil Kabupaten Rembang — imperial Lasem & velvet obsidian: kanvas alabaster sutra hangat (#FAF8F5), arang beludru (#141416), tiga warna aksen kultural (merah delima Lasem keraton #A31828, biru wedel pesisir #1B365D, zamrud soga #0E585E). Dark mode: obsidian beludru (#0A0B0E), kartu obsidian (#14161C), teks titanium (#F4F4F6), aksen rubi berkilau (#F43F5E), tombol rubi beludru (#BE123C).
 
 colors:
-  # --- Tiga warna aksen pesisir (segar, berwibawa, saturasi tinggi) ---
-  merah-lasem: '#c81e2b'
-  merah-lasem-deep: '#991b1b'
-  indigo-lasem: '#0369a1'
-  soga: '#0a6b79'
+  # --- Tiga warna aksen pesisir (elegan, keraton, saturasi berwibawa) ---
+  merah-lasem: '#a31828'
+  merah-lasem-deep: '#83101e'
+  indigo-lasem: '#1b365d'
+  soga: '#0e585e'
 
-  # --- Permukaan terang (putih garam laut sejuk & bercahaya) ---
-  paper: '#f8fafc'
+  # --- Permukaan terang (alabaster sutra hangat & bercahaya) ---
+  paper: '#faf8f5'
   paper-raised: '#ffffff'
-  paper-sunken: '#f1f5f9'
-  ink: '#0f172a'
-  ink-soft: '#475569'
-  rule: '#e2e8f0'
-  focus: '#c81e2b'
-  scrim: '#0f172a'
+  paper-sunken: '#f1efeb'
+  ink: '#141416'
+  ink-soft: '#56555c'
+  rule: '#e4e2da'
+  focus: '#a31828'
+  scrim: '#141416'
 
-  # --- Permukaan gelap (samudera malam dalam) ---
-  paper-dark: '#0b1120'
-  paper-dark-raised: '#131c31'
-  paper-dark-sunken: '#070a12'
-  ink-dark: '#f1f5f9'
-  ink-soft-dark: '#94a3b8'
-  rule-dark: '#1e293b'
-  merah-lasem-dark: '#f87171'
-  merah-lasem-deep-dark: '#fca5a5'
-  indigo-lasem-dark: '#38bdf8'
+  # --- Permukaan gelap (obsidian beludru pekat) ---
+  paper-dark: '#0a0b0e'
+  paper-dark-raised: '#14161c'
+  paper-dark-sunken: '#060709'
+  ink-dark: '#f4f4f6'
+  ink-soft-dark: '#90919c'
+  rule-dark: '#20232c'
+  merah-lasem-dark: '#f43f5e'
+  merah-lasem-deep-dark: '#fb7185'
+  merah-lasem-fill-dark: '#be123c'
+  indigo-lasem-dark: '#60a5fa'
   soga-dark: '#2dd4bf'
 
 typography:
@@ -37,7 +38,7 @@ typography:
     fontFamily: 'Hanken Grotesk Variable'
     fontSize: 'clamp(3rem, 9vw, 6.5rem)'
     fontWeight: 700
-    lineHeight: 0.94
+    lineHeight: 1.05
     letterSpacing: '-0.035em'
   h1:
     fontFamily: 'Hanken Grotesk Variable'
@@ -99,7 +100,7 @@ spacing:
 components:
   button-primary:
     backgroundColor: '{colors.merah-lasem}'
-    textColor: '{colors.paper-raised}'
+    textColor: '#ffffff'
     rounded: '{rounded.control}'
     padding: '0.75rem 1.25rem'
   card:
