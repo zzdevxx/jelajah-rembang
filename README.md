@@ -1,5 +1,13 @@
 # Jelajah Rembang
 
+[![Live](https://img.shields.io/badge/Live-jelajah--rembang.zzdree.workers.dev-success?style=flat-square&logo=cloudflare)](https://jelajah-rembang.zzdree.workers.dev)
+[![Stack](https://img.shields.io/badge/Astro-7-BC52EE?style=flat-square&logo=astro)](https://astro.build)
+[![Stack](https://img.shields.io/badge/Tailwind-v4-06B6D4?style=flat-square&logo=tailwindcss)](https://tailwindcss.com)
+[![Bilingual](https://img.shields.io/badge/Language-ID%20%2B%20EN-blue?style=flat-square)](https://jelajah-rembang.zzdree.workers.dev/en/)
+[![Tests](https://img.shields.io/badge/Tests-47%20passing-brightgreen?style=flat-square)](https://playwright.dev)
+[![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)](LICENSE)
+
+
 Situs profil daerah **Kabupaten Rembang**, Jawa Tengah: sejarah, budaya, kuliner, destinasi wisata, profil & geografi, galeri, dan peta interaktif. Bilingual (Indonesia + Inggris), statis, cepat.
 
 Live: `https://jelajah-rembang.zzdree.workers.dev`
