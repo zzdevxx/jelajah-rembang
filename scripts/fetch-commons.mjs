@@ -21,7 +21,7 @@ import { fileURLToPath } from 'node:url';
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const ASSETS = join(ROOT, 'src', 'assets');
 const CREDITS = join(ASSETS, 'credits.json');
-const UA = 'jelajah-rembang/0.1 (https://github.com/zzdree/jelajah-rembang; educational)';
+const UA = 'jelajah-rembang/0.1 (https://github.com/zzdevxx/jelajah-rembang; educational)';
 const API = 'https://commons.wikimedia.org/w/api.php';
 const THUMB_W = 1600;
 const SLEEP_API = 9000;

@@ -14,7 +14,7 @@ Berisi sejarah, budaya, kuliner, destinasi wisata, profil & geografi, galeri, da
 Bilingual: **Indonesia** (root) + **Inggris** (`/en/`).
 
 - **Live:** https://jelajah-rembang.zzdree.workers.dev
-- **Repo:** https://github.com/zzdree/jelajah-rembang
+- **Repo:** https://github.com/zzdevxx/jelajah-rembang
 - **Bahasa konten:** Indonesia (utama) + Inggris (terjemahan tulisan, bukan mesin)
 
 ---

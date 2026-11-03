@@ -32,7 +32,7 @@ untuk kartu tanpa foto.
 | Versi Cloudflare aktif | `4c453ecd-1c50-4d7a-b230-1496d7f14aa0` |
 
 **Live:** https://jelajah-rembang.zzdree.workers.dev
-**Repo:** https://github.com/zzdree/jelajah-rembang
+**Repo:** https://github.com/zzdevxx/jelajah-rembang
 
 Berkas uji: `tests/smoke.spec.ts` (asli), `tests/contrast.spec.ts` (kontras nyata dari
 computed style, 6 halaman × 2 tema), `tests/interactions.spec.ts` (regresi lintas navigasi),
