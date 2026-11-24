@@ -45,5 +45,9 @@
     "typescript": "6.0.3",
     "wawoff2": "^2.0.1",
     "wrangler": "^4.148.0"
+  },
+  "allowScripts": {
+    "esbuild@0.28.2": true,
+    "workerd@1.20261123.1": true
   }
 }
